@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lar das Delícias | Confeitaria Artesanal Premium 0% Lactose</title>
+    <title>Lar das Delícias | Confeitaria Artesanal Premium Inclusiva</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -164,6 +164,44 @@
             margin-bottom: 15px;
         }
 
+        /* Estilos para a história pessoal */
+        .personal-story {
+            background: linear-gradient(135deg, rgba(139, 69, 19, 0.05), rgba(255, 107, 139, 0.05));
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 5px solid var(--secondary);
+            margin: 25px 0;
+            font-style: italic;
+        }
+
+        .personal-story p {
+            margin-bottom: 15px;
+            color: var(--text);
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .mission-statement {
+            background: linear-gradient(135deg, rgba(255, 214, 102, 0.1), rgba(139, 69, 19, 0.1));
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            text-align: center;
+            border: 2px solid var(--accent);
+        }
+
+        .mission-statement p {
+            font-size: 1.2rem;
+            color: var(--dark);
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        .mission-statement strong {
+            color: var(--primary);
+            font-size: 1.3rem;
+        }
+
         /* Header Superior */
         .header-top {
             background: var(--dark);
@@ -254,11 +292,6 @@
         .logo-img {
             height: 60px;
             width: auto;
-        }
-
-        .logo-text {
-            display: flex;
-            flex-direction: column;
         }
 
         .logo-text .brand {
@@ -485,16 +518,7 @@
             transform: scale(1.05);
         }
 
-        .sobre-img:after {
-            content: '';
-            position: absolute;
-            width: 100px;
-            height: 100px;
-            background: url('https://i.imgur.com/eUa0hLX.png') center/contain no-repeat;
-            bottom: 20px;
-            right: 20px;
-            z-index: 2;
-        }
+        /* LOGO REMOVIDA DA FOTO - CÓDIGO RETIRADO */
 
         .sobre-text h2 {
             font-size: 2.8rem;
@@ -915,6 +939,28 @@
             min-height: 150px;
             resize: vertical;
         }
+        
+        /* CORREÇÃO DO CONTRATE E ESTILO DO TÍTULO "SIGA-NOS" */
+        .contato .footer-social .footer-title {
+            color: var(--dark); /* Cor preta/escura para contraste no fundo claro */
+        }
+        
+        /* CORREÇÃO DO CONTRATE E ESTILO DOS ÍCONES SOCIAIS */
+        .contato .footer-social .social-icons a {
+            color: var(--primary-light); /* Ícones com cor mais suave e elegante */
+            background: var(--white); /* Fundo branco limpo */
+            border: 2px solid var(--primary-light); /* Borda sutil na cor da marca */
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Transição mais suave e orgânica */
+        }
+        
+        .contato .footer-social .social-icons a:hover {
+            color: var(--white);
+            background: var(--secondary); /* Cor principal da marca (Rosa) no hover */
+            transform: translateY(-5px) scale(1.05);
+            border-color: var(--secondary);
+            box-shadow: 0 4px 15px rgba(255, 107, 139, 0.4); /* Sombra fofa para efeito flutuante */
+        }
+
 
         /* Footer */
         .footer {
@@ -1089,6 +1135,11 @@
                 flex-direction: column;
                 gap: 15px;
             }
+            
+            .personal-story, .mission-statement {
+                padding: 20px;
+                margin: 20px 0;
+            }
         }
 
         @media (max-width: 768px) {
@@ -1121,6 +1172,10 @@
             .header-top {
                 display: none;
             }
+            
+            .personal-story p, .mission-statement p {
+                font-size: 1rem;
+            }
         }
 
         @media (max-width: 576px) {
@@ -1140,16 +1195,18 @@
             .footer-content {
                 grid-template-columns: 1fr;
             }
+            
+            .personal-story, .mission-statement {
+                padding: 15px;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- WhatsApp Float -->
     <a href="https://wa.me/5511977921704" target="_blank" class="whatsapp-float">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- Header Top -->
     <div class="header-top">
         <div class="container">
             <div class="contact-info">
@@ -1174,7 +1231,6 @@
         </div>
     </div>
 
-    <!-- Header Principal -->
     <header class="main-header" id="mainHeader">
         <div class="container">
             <nav class="main-nav">
@@ -1190,7 +1246,7 @@
                     <li><a href="#home" class="active">Início</a></li>
                     <li><a href="#sobre">Sobre</a></li>
                     <li><a href="#produtos">Produtos</a></li>
-                    <li><a href="#processo">Processo</a></li>
+                    <li><a href="#processo">Protocolo de Segurança</a></li>
                     <li><a href="#depoimentos">Depoimentos</a></li>
                     <li><a href="#contato">Contato</a></li>
                 </ul>
@@ -1208,13 +1264,12 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
-                <span class="badge">Especialistas em 0% Lactose</span>
-                <h1>Confeitaria Artesanal <span class="hero-highlight">Premium</span> para Momentos Especiais</h1>
-                <p>Transformamos ingredientes selecionados em experiências únicas. Doces, bolos e salgados artesanais 100% livres de lactose, feitos com amor e maestria.</p>
+                <span class="badge" style="background: var(--success);">Linha 0% Lactose Disponível</span>
+                <h1>Confeitaria Artesanal com <span class="hero-highlight">Linhas de Produção Inclusiva</span></h1>
+                <p>Doces, bolos e salgados artesanais. Atendemos a linha tradicional e a linha Zero Lactose, desenvolvidas com receitas dedicadas para sabor e segurança.</p>
                 
                 <div class="hero-buttons">
                     <a href="#produtos" class="btn btn-secondary">
@@ -1228,7 +1283,6 @@
         </div>
     </section>
 
-    <!-- Diferenciais -->
     <section class="diferenciais">
         <div class="container">
             <div class="diferenciais-grid">
@@ -1236,8 +1290,8 @@
                     <div class="diferencial-icon">
                         <i class="fas fa-seedling"></i>
                     </div>
-                    <h3>100% Sem Lactose</h3>
-                    <p>Especialistas em APLV - Todos os produtos são seguros para pessoas com alergia à proteína do leite.</p>
+                    <h3>Linha Artesanal 0% Lactose</h3>
+                    <p>Receitas exclusivas para dietas de exclusão de lactose. **Importante:** Produção em ambiente que manipula leite. Consulte nosso Protocolo de Segurança.</p>
                 </div>
                 
                 <div class="diferencial-card">
@@ -1245,7 +1299,7 @@
                         <i class="fas fa-award"></i>
                     </div>
                     <h3>Ingredientes Premium</h3>
-                    <p>Utilizamos apenas os melhores ingredientes selecionados para garantir sabor e qualidade excepcionais.</p>
+                    <p>Utilizamos apenas os melhores ingredientes selecionados para garantir sabor e qualidade excepcionais em ambas as linhas.</p>
                 </div>
                 
                 <div class="diferencial-card">
@@ -1267,7 +1321,6 @@
         </div>
     </section>
 
-    <!-- Sobre -->
     <section id="sobre" class="sobre section">
         <div class="container">
             <div class="section-title">
@@ -1281,10 +1334,27 @@
                 </div>
                 
                 <div class="sobre-text">
-                    <h2>Transformando Paixão em Sabor</h2>
-                    <p>Fundada por Jô, uma confeiteira com mais de 10 anos de experiência, o Lar das Delícias nasceu do desejo de criar doces que todos possam desfrutar, especialmente aqueles com restrições alimentares.</p>
+                    <h2>Da Restrição à Celebração: Nossa História</h2>
                     
-                    <p>Nossa especialização em produtos 0% lactose vem da experiência pessoal com familiares portadores de APLV. Entendemos a importância de oferecer opções deliciosas e seguras para todos os paladares.</p>
+                    <div class="personal-story">
+                        <p><strong>"Eu sou a Jociara, cozinhar sempre foi um ato de amor.</strong></p>
+                        <p>A experiência da APLV na família me levou a desenvolver a Linha Zero Lactose, para que ninguém precise abrir mão do prazer de um doce.</p>
+                    </div>
+                    
+                    <p>Hoje, atendemos a todos os públicos com duas linhas de produtos distintas: a linha tradicional, com leite, e a linha Zero Lactose (APLV Friendly).</p>
+                    
+                    <p><strong>Foi por isso que desenvolvemos uma cozinha inclusiva.</strong></p>
+                    
+                    <p>No Lar das Delícias, criamos pães, bolos, tortas, panetones e ceias completas nas duas opções. Todos os produtos Zero Lactose são feitos com técnica, ingredientes substitutos de qualidade e afeto.</p>
+                    
+                    <p>Somos uma confeitaria e buffet delivery da Zona Leste de São Paulo, construída com fé, conexões e clientes que viraram rede de apoio.</p>
+                    
+                    <div class="mission-statement">
+                        <p><strong>Nosso propósito é simples e profundo:</strong><br>
+                        Garantir que todos possam celebrar, seja com a linha tradicional ou a Linha Zero Lactose.</p>
+                        <p>É assim que escolhemos cuidar das pessoas —<br>
+                        um prato delicioso e pensado para você por vez.</p>
+                    </div>
                     
                     <div class="sobre-features">
                         <div class="sobre-feature">
@@ -1293,7 +1363,7 @@
                         </div>
                         <div class="sobre-feature">
                             <i class="fas fa-check-circle"></i>
-                            <span>Especialização em APLV e alergias alimentares</span>
+                            <span>Opções Zero Lactose e Linha Tradicional</span>
                         </div>
                         <div class="sobre-feature">
                             <i class="fas fa-check-circle"></i>
@@ -1306,19 +1376,18 @@
                     </div>
                     
                     <a href="#contato" class="btn">
-                        <i class="fas fa-calendar-check"></i> Agendar Consulta
+                        <i class="fas fa-calendar-check"></i> Iniciar Encomenda Personalizada
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Produtos -->
     <section id="produtos" class="produtos section">
         <div class="container">
             <div class="section-title">
                 <h2>Nossos Produtos</h2>
-                <p>Descubra nossas especialidades artesanais</p>
+                <p>Descubra nossas especialidades artesanais. **Lembre-se de especificar sua linha no pedido!**</p>
             </div>
             
             <div class="produtos-filter">
@@ -1327,18 +1396,19 @@
                 <button class="filter-btn" data-filter="doces">Doces Finos</button>
                 <button class="filter-btn" data-filter="salgados">Salgados</button>
                 <button class="filter-btn" data-filter="especiais">Especiais</button>
+                <button class="filter-btn" data-filter="tradicional">Linha Tradicional</button>
+                <button class="filter-btn" data-filter="zerolactose">Linha 0% Lactose</button>
             </div>
             
             <div class="produtos-grid">
-                <!-- Produto 1 -->
-                <div class="produto-card" data-category="bolos">
+                <div class="produto-card" data-category="bolos tradicional zerolactose">
                     <div class="produto-img">
                         <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Bolo Decorado Premium">
                         <div class="produto-tag">MAIS VENDIDO</div>
                     </div>
                     <div class="produto-info">
                         <h3>Bolo Decorado Premium</h3>
-                        <p class="produto-desc">Bolo artesanal decorado com pasta americana, recheios especiais e acabamento impecável.</p>
+                        <p class="produto-desc">Bolo artesanal decorado, disponível nas versões Tradicional (com leite) e Zero Lactose. (Consulte valor diferenciado).</p>
                         <div class="produto-price">
                             <div class="price">A partir de R$ 180<small>/kg</small></div>
                             <button class="produto-btn" data-product="Bolo Decorado Premium">
@@ -1348,15 +1418,14 @@
                     </div>
                 </div>
                 
-                <!-- Produto 2 -->
-                <div class="produto-card" data-category="doces">
+                <div class="produto-card" data-category="doces tradicional zerolactose">
                     <div class="produto-img">
                         <img src="https://images.unsplash.com/photo-1559620192-032c64bc86af?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Brigadeiros Gourmet">
-                        <div class="produto-tag">SEM LACTOSE</div>
+                        <div class="produto-tag" style="background: var(--success);">OPÇÃO 0% LACTOSE</div>
                     </div>
                     <div class="produto-info">
                         <h3>Brigadeiros Gourmet</h3>
-                        <p class="produto-desc">Seleção de brigadeiros premium em sabores exclusivos, 100% sem lactose.</p>
+                        <p class="produto-desc">Seleção de brigadeiros premium, disponível na versão tradicional e 0% Lactose.</p>
                         <div class="produto-price">
                             <div class="price">R$ 4,50<small>/unidade</small></div>
                             <button class="produto-btn" data-product="Brigadeiros Gourmet">
@@ -1366,14 +1435,13 @@
                     </div>
                 </div>
                 
-                <!-- Produto 3 -->
-                <div class="produto-card" data-category="salgados">
+                <div class="produto-card" data-category="salgados tradicional zerolactose">
                     <div class="produto-img">
                         <img src="https://images.unsplash.com/photo-1541783245831-57d6fb0926d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Salgados Finos">
                     </div>
                     <div class="produto-info">
                         <h3>Salgados Finos para Festas</h3>
-                        <p class="produto-desc">Seleção premium de salgados assados e fritos para eventos sofisticados.</p>
+                        <p class="produto-desc">Seleção premium de salgados assados e fritos para eventos sofisticados, com opção Zero Lactose.</p>
                         <div class="produto-price">
                             <div class="price">R$ 120<small>/cento</small></div>
                             <button class="produto-btn" data-product="Salgados Finos">
@@ -1383,14 +1451,13 @@
                     </div>
                 </div>
                 
-                <!-- Produto 4 -->
-                <div class="produto-card" data-category="bolos">
+                <div class="produto-card" data-category="bolos tradicional">
                     <div class="produto-img">
                         <img src="https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Bolo de Casamento">
                     </div>
                     <div class="produto-info">
                         <h3>Bolo Nupcial Elegante</h3>
-                        <p class="produto-desc">Bolo de casamento com design exclusivo e sofisticado para seu dia especial.</p>
+                        <p class="produto-desc">Bolo de casamento com design exclusivo, disponível nas versões Tradicional e Zero Lactose.</p>
                         <div class="produto-price">
                             <div class="price">Sob Consulta</div>
                             <button class="produto-btn" data-product="Bolo Nupcial">
@@ -1400,14 +1467,13 @@
                     </div>
                 </div>
                 
-                <!-- Produto 5 -->
-                <div class="produto-card" data-category="doces">
+                <div class="produto-card" data-category="doces tradicional zerolactose">
                     <div class="produto-img">
                         <img src="https://images.unsplash.com/photo-1571115764595-644a1f56a55c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Doces Finos">
                     </div>
                     <div class="produto-info">
                         <h3>Doces Finos Premium</h3>
-                        <p class="produto-desc">Variedade de doces finos para sua festa, todos sem lactose e com sabores exclusivos.</p>
+                        <p class="produto-desc">Variedade de doces finos para sua festa, com opções tradicionais e 0% Lactose.</p>
                         <div class="produto-price">
                             <div class="price">R$ 85<small>/cento</small></div>
                             <button class="produto-btn" data-product="Doces Finos">
@@ -1417,14 +1483,13 @@
                     </div>
                 </div>
                 
-                <!-- Produto 6 -->
-                <div class="produto-card" data-category="especiais">
+                <div class="produto-card" data-category="especiais tradicional zerolactose">
                     <div class="produto-img">
                         <img src="https://images.unsplash.com/photo-1519861531473-920034658307?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Tortas Decoradas">
                     </div>
                     <div class="produto-info">
                         <h3>Tortas Artísticas</h3>
-                        <p class="produto-desc">Tortas doces com designs criativos e recheios especiais, perfeitas para ocasiões especiais.</p>
+                        <p class="produto-desc">Tortas doces com designs criativos, disponíveis nas duas linhas de produção.</p>
                         <div class="produto-price">
                             <div class="price">A partir de R$ 120<small>/unidade</small></div>
                             <button class="produto-btn" data-product="Tortas Artísticas">
@@ -1443,31 +1508,30 @@
         </div>
     </section>
 
-    <!-- Processo -->
     <section id="processo" class="processo section">
         <div class="container">
             <div class="section-title">
-                <h2>Nosso Processo</h2>
-                <p>Da consulta à entrega: excelência em cada etapa</p>
+                <h2>Protocolo de Produção Segura</h2>
+                <p>Da consulta à entrega: transparência e excelência em cada etapa</p>
             </div>
             
             <div class="processo-steps">
                 <div class="processo-step">
                     <div class="step-number">1</div>
-                    <h3>Consulta</h3>
-                    <p>Conversamos para entender suas necessidades e criar um conceito único.</p>
+                    <h3>Consulta e Restrições</h3>
+                    <p>Conversamos para entender se a Linha Zero Lactose atende suas necessidades (ex: APLV) e criamos um conceito único.</p>
                 </div>
                 
                 <div class="processo-step">
                     <div class="step-number">2</div>
                     <h3>Orçamento</h3>
-                    <p>Preparamos uma proposta detalhada com todas as opções disponíveis.</p>
+                    <p>Preparamos uma proposta detalhada com todas as opções de linha (Tradicional ou 0% Lactose).</p>
                 </div>
                 
                 <div class="processo-step">
                     <div class="step-number">3</div>
                     <h3>Produção</h3>
-                    <p>Fabricamos artesanalmente cada item com ingredientes selecionados.</p>
+                    <p>Fabricamos artesanalmente cada item, seguindo o protocolo de higienização específico para cada linha.</p>
                 </div>
                 
                 <div class="processo-step">
@@ -1479,7 +1543,6 @@
         </div>
     </section>
 
-    <!-- Depoimentos -->
     <section id="depoimentos" class="depoimentos section">
         <div class="container">
             <div class="section-title">
@@ -1517,7 +1580,6 @@
         </div>
     </section>
 
-    <!-- Galeria -->
     <section class="galeria section">
         <div class="container">
             <div class="section-title">
@@ -1527,28 +1589,28 @@
             
             <div class="galeria-grid">
                 <div class="galeria-item">
-                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Bolo de Aniversário">
+                    <img src="https://i.imgur.com/9smeBKG.jpeg" alt="Bolo de chocolate luxuoso com cobertura escura e orquídeas pink/roxas vibrantes no topo.">
                     <div class="galeria-overlay">
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </div>
                 
                 <div class="galeria-item">
-                    <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Bolo Decorado">
+                    <img src="https://i.imgur.com/VqWOH4o.jpeg" alt="Bolo de chocolate decorado com lascas de chocolate nas laterais, topo de chantilly de chocolate e esferas douradas comestíveis.">
                     <div class="galeria-overlay">
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </div>
                 
                 <div class="galeria-item">
-                    <img src="https://images.unsplash.com/photo-1559620192-032c64bc86af?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Doces Finos">
+                    <img src="https://i.imgur.com/5miCFFj.jpeg" alt="Bolo de creme de baunilha branco texturizado com detalhes em folha de ouro comestível e três flores decorativas na base.">
                     <div class="galeria-overlay">
                         <i class="fas fa-search-plus"></i>
                     </div>
                 </div>
                 
                 <div class="galeria-item">
-                    <img src="https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Bolo de Casamento">
+                    <img src="https://i.imgur.com/lzOS1TM.jpeg" alt="Bolo branco com respingos e borda superior em folha verdes comestível, decorado na base.">
                     <div class="galeria-overlay">
                         <i class="fas fa-search-plus"></i>
                     </div>
@@ -1557,7 +1619,6 @@
         </div>
     </section>
 
-    <!-- Contato -->
     <section id="contato" class="contato section">
         <div class="container">
             <div class="section-title">
@@ -1658,7 +1719,7 @@
                         
                         <div class="form-group">
                             <label for="mensagem">Conte-nos sobre sua ideia *</label>
-                            <textarea id="mensagem" class="form-control" required rows="5" placeholder="Descreva o que você imagina para sua festa, quantidade de pessoas, restrições alimentares, etc..."></textarea>
+                            <textarea id="mensagem" class="form-control" required rows="5" placeholder="Descreva o que você imagina para sua festa, se precisa da linha Tradicional ou Zero Lactose, quantidade de pessoas, etc..."></textarea>
                         </div>
                         
                         <button type="submit" class="btn" style="width: 100%;">
@@ -1670,7 +1731,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -1679,7 +1739,7 @@
                         <img src="https://i.imgur.com/eUa0hLX.png" alt="Lar das Delícias">
                         <div class="brand">Lar das Delícias</div>
                     </div>
-                    <p>Confeitaria artesanal premium especializada em produtos 0% lactose para pessoas com APLV. Transformamos momentos especiais em memórias doces e seguras para todos.</p>
+                    <p>Confeitaria artesanal premium com foco em inclusão. Dispomos da linha Tradicional e da Linha Zero Lactose, desenvolvidas com cuidado e transparência.</p>
                     <div class="footer-social">
                         <div class="social-icons">
                             <a href="https://wa.me/5511977921704" target="_blank"><i class="fab fa-whatsapp"></i></a>
@@ -1695,7 +1755,7 @@
                         <li><a href="#home">Início</a></li>
                         <li><a href="#sobre">Sobre Nós</a></li>
                         <li><a href="#produtos">Produtos</a></li>
-                        <li><a href="#processo">Nosso Processo</a></li>
+                        <li><a href="#processo">Protocolo de Segurança</a></li>
                         <li><a href="#contato">Contato</a></li>
                     </ul>
                 </div>
@@ -1704,7 +1764,7 @@
                     <h4 class="footer-title">Produtos</h4>
                     <ul>
                         <li><a href="#produtos">Bolos Personalizados</a></li>
-                        <li><a href="#produtos">Doces Finos 0% Lactose</a></li>
+                        <li><a href="#produtos">Doces Finos (Opções 0% Lactose)</a></li>
                         <li><a href="#produtos">Salgados Premium</a></li>
                         <li><a href="#produtos">Brigadeiros Gourmet</a></li>
                         <li><a href="#produtos">Tortas Artísticas</a></li>
@@ -1725,7 +1785,7 @@
             
             <div class="footer-bottom">
                 <p>&copy; 2023 Lar das Delícias Confeitaria Artesanal. Todos os direitos reservados.</p>
-                <p style="margin-top: 10px;">Especialistas em doces 0% lactose (APLV) | CNPJ: 00.000.000/0001-00</p>
+                <p style="margin-top: 10px;">Confeitaria Inclusiva com Linha Tradicional e Linha 0% Lactose (APLV Friendly) | CNPJ: 00.000.000/0001-00</p>
             </div>
         </div>
     </footer>
@@ -1802,7 +1862,7 @@
                 const filter = this.getAttribute('data-filter');
                 
                 produtoCards.forEach(card => {
-                    if (filter === 'todos' || card.getAttribute('data-category') === filter) {
+                    if (filter === 'todos' || card.getAttribute('data-category').includes(filter)) {
                         card.style.display = 'block';
                         setTimeout(() => {
                             card.style.opacity = '1';
@@ -1854,7 +1914,7 @@
                 
                 // Redirect to WhatsApp after 3 seconds
                 setTimeout(() => {
-                    const message = `Olá! Gostaria de mais informações sobre: ${productName}`;
+                    const message = `Olá! Gostaria de mais informações sobre: ${productName}. Por favor, me informe se desejo a Linha Tradicional ou a Linha Zero Lactose.`;
                     window.open(`https://wa.me/5511977921704?text=${encodeURIComponent(message)}`, '_blank');
                 }, 3500);
             });
@@ -1879,10 +1939,10 @@
             whatsappMsg += `*Nome:* ${nome}\n`;
             whatsappMsg += `*Telefone:* ${telefone}\n`;
             if (email) whatsappMsg += `*E-mail:* ${email}\n`;
-            whatsappMsg += `*Tipo de Evento:* ${document.getElementById('evento').options[evento.selectedIndex].text}\n`;
+            whatsappMsg += `*Tipo de Evento:* ${document.getElementById('evento').options[document.getElementById('evento').selectedIndex].text}\n`;
             whatsappMsg += `*Data do Evento:* ${data}\n\n`;
             whatsappMsg += `*Mensagem:*\n${mensagem}\n\n`;
-            whatsappMsg += `_Consulta enviada via site_`;
+            whatsappMsg += `_Consulta enviada via site. Por favor, especifique qual linha de produção você precisa: Tradicional ou Zero Lactose._`;
             
             // Encode message for URL
             const encodedMsg = encodeURIComponent(whatsappMsg);
@@ -1937,3 +1997,4 @@
     </script>
 </body>
 </html>
+```
