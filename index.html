@@ -10,29 +10,235 @@
     <meta name="keywords" content="confeitaria São Paulo, bolo sem lactose, APLV, doces inclusivos, zero lactose, bolo artesanal SP, buffet delivery, festas inclusivas, sem glúten, ceia de Natal, cardápio Natal 2025">
     <meta name="author" content="Lar das Delícias">
     
+    <!-- Schema Markup para SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Bakery",
+                "@id": "https://lardasdelicias.com.br/#bakery",
+                "name": "Lar das Delícias",
+                "description": "Confeitaria artesanal em São Paulo com linha tradicional e linha Zero Lactose/APLV Friendly. Bolos, doces e salgados para eventos com segurança e sabor premium.",
+                "image": "https://i.imgur.com/izZaPc4.jpeg",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "Av. César Augusto Romaro, 111",
+                    "addressLocality": "São Paulo",
+                    "addressRegion": "SP",
+                    "addressCountry": "BR"
+                },
+                "telephone": "+5511977921704",
+                "openingHours": "Mo-Sa 08:00-18:00",
+                "url": "https://lardasdelicias.com.br/",
+                "servesCuisine": ["Brazilian", "Desserts", "Zero Lactose", "APLV Friendly"],
+                "priceRange": "$$",
+                "menu": "https://lardasdelicias.com.br/#produtos",
+                "acceptsReservations": "True",
+                "paymentAccepted": ["Cash", "Credit Card", "Debit Card", "PIX"],
+                "currenciesAccepted": "BRL",
+                "founder": {
+                    "@type": "Person",
+                    "name": "Jociara",
+                    "description": "Fundadora do Lar das Delícias, especialista em confeitaria inclusiva"
+                },
+                "sameAs": [
+                    "https://instagram.com/lar_das_delicias",
+                    "https://facebook.com/lardasdelicias",
+                    "https://wa.me/5511977921704"
+                ]
+            },
+            {
+                "@type": "WebSite",
+                "@id": "https://lardasdelicias.com.br/#website",
+                "url": "https://lardasdelicias.com.br/",
+                "name": "Lar das Delícias",
+                "description": "Confeitaria artesanal com linha tradicional e Zero Lactose em São Paulo",
+                "publisher": {
+                    "@id": "https://lardasdelicias.com.br/#bakery"
+                },
+                "inLanguage": "pt-BR"
+            },
+            {
+                "@type": "LocalBusiness",
+                "@id": "https://lardasdelicias.com.br/#localbusiness",
+                "name": "Lar das Delícias",
+                "description": "Confeitaria artesanal especializada em produtos Zero Lactose e linha tradicional",
+                "image": "https://i.imgur.com/eUa0hLX.png",
+                "telephone": "+5511977921704",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "Av. César Augusto Romaro, 111",
+                    "addressLocality": "São Paulo",
+                    "addressRegion": "SP",
+                    "postalCode": "00000-000",
+                    "addressCountry": "BR"
+                },
+                "openingHoursSpecification": [
+                    {
+                        "@type": "OpeningHoursSpecification",
+                        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                        "opens": "08:00",
+                        "closes": "18:00"
+                    }
+                ],
+                "priceRange": "$$",
+                "menu": "https://lardasdelicias.com.br/#produtos",
+                "servesCuisine": ["Brasileira", "Sobremesas", "Zero Lactose", "APLV Friendly"],
+                "areaServed": {
+                    "@type": "GeoCircle",
+                    "geoMidpoint": {
+                        "@type": "GeoCoordinates",
+                        "latitude": -23.5505,
+                        "longitude": -46.6333
+                    },
+                    "geoRadius": "50000"
+                },
+                "sameAs": [
+                    "https://instagram.com/lar_das_delicias",
+                    "https://wa.me/5511977921704"
+                ]
+            },
+            {
+                "@type": "Organization",
+                "@id": "https://lardasdelicias.com.br/#organization",
+                "name": "Lar das Delícias",
+                "url": "https://lardasdelicias.com.br/",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://i.imgur.com/eUa0hLX.png",
+                    "width": "500",
+                    "height": "500"
+                },
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "telephone": "+5511977921704",
+                    "contactType": "Customer Service",
+                    "areaServed": "BR",
+                    "availableLanguage": ["Portuguese", "English"]
+                },
+                "sameAs": [
+                    "https://instagram.com/lar_das_delicias",
+                    "https://wa.me/5511977921704"
+                ]
+            },
+            {
+                "@type": "Product",
+                "name": "Bolo Decorado Premium",
+                "description": "Bolo artesanal decorado, disponível nas versões Tradicional (com leite) e Zero Lactose",
+                "sku": "BLG-PRM-001",
+                "offers": {
+                    "@type": "Offer",
+                    "price": "180.00",
+                    "priceCurrency": "BRL",
+                    "priceValidUntil": "2025-12-31",
+                    "availability": "https://schema.org/InStock",
+                    "url": "https://lardasdelicias.com.br/#produtos"
+                },
+                "brand": {
+                    "@type": "Brand",
+                    "name": "Lar das Delícias"
+                },
+                "additionalProperty": [
+                    {
+                        "@type": "PropertyValue",
+                        "name": "Tipo",
+                        "value": "Bolo"
+                    },
+                    {
+                        "@type": "PropertyValue",
+                        "name": "Linha",
+                        "value": "Tradicional e Zero Lactose"
+                    }
+                ]
+            },
+            {
+                "@type": "Product",
+                "name": "Bolo Red Velvet",
+                "description": "Bolo Red Velvet caseiro com calda cremosa branca e decoração de morangos frescos",
+                "sku": "BLG-RV-002",
+                "offers": {
+                    "@type": "Offer",
+                    "price": "4.50",
+                    "priceCurrency": "BRL",
+                    "priceValidUntil": "2025-12-31",
+                    "availability": "https://schema.org/InStock",
+                    "url": "https://lardasdelicias.com.br/#produtos"
+                },
+                "brand": {
+                    "@type": "Brand",
+                    "name": "Lar das Delícias"
+                }
+            },
+            {
+                "@type": "Event",
+                "name": "Encomendas de Natal 2025",
+                "startDate": "2025-11-01",
+                "endDate": "2025-12-20",
+                "eventStatus": "https://schema.org/EventScheduled",
+                "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+                "location": {
+                    "@type": "Place",
+                    "name": "Lar das Delícias",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": "Av. César Augusto Romaro, 111",
+                        "addressLocality": "São Paulo",
+                        "addressRegion": "SP"
+                    }
+                },
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "BRL",
+                    "availability": "https://schema.org/InStock",
+                    "validFrom": "2025-11-01"
+                },
+                "description": "Período de encomendas para a ceia de Natal 2025. Produtos artesanais Zero Lactose e tradicionais."
+            }
+        ]
+    }
+    </script>
+    
     <!-- Open Graph / Redes Sociais -->
     <meta property="og:title" content="Lar das Delícias | Confeitaria Inclusiva SP">
     <meta property="og:description" content="Doces e bolos artesanais com linha tradicional e Zero Lactose. Celebre sem restrições!">
     <meta property="og:image" content="https://i.imgur.com/izZaPc4.jpeg">
     <meta property="og:url" content="https://lardasdelicias.com.br">
     <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Lar das Delícias">
     
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Lar das Delícias - Confeitaria Inclusiva">
     <meta name="twitter:description" content="Confeitaria artesanal com linha Zero Lactose em São Paulo">
     <meta name="twitter:image" content="https://i.imgur.com/izZaPc4.jpeg">
+    <meta name="twitter:site" content="@lardasdelicias">
+    <meta name="twitter:creator" content="@lardasdelicias">
     
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="https://i.imgur.com/eUa0hLX.png">
     <link rel="icon" type="image/png" sizes="32x32" href="https://i.imgur.com/eUa0hLX.png">
     <link rel="icon" type="image/png" sizes="16x16" href="https://i.imgur.com/eUa0hLX.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#8B4513">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://lardasdelicias.com.br">
+    
+    <!-- Robots Meta Tag -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     
     <!-- Fonts & Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700&family=Mountains+of+Christmas:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Preload de imagens críticas -->
+    <link rel="preload" href="https://i.imgur.com/eUa0hLX.png" as="image">
+    <link rel="preload" href="https://i.imgur.com/izZaPc4.jpeg" as="image">
     
     <style>
         /* Reset e Variáveis CSS */
@@ -518,12 +724,20 @@
             flex-wrap: wrap;
         }
 
+        /* =========================================== */
+        /* ESTILOS ESPECÍFICOS PARA A PÁGINA DE NATAL  */
+        /* =========================================== */
+        
         /* SEÇÃO DE NATAL - ABA/GUIA */
         .natal-tab-container {
             display: none;
-            background: linear-gradient(135deg, rgba(34, 139, 34, 0.05), rgba(196, 30, 58, 0.05));
             min-height: 100vh;
             padding-top: 120px;
+            background: linear-gradient(135deg, #0a3d2f 0%, #082b21 100%);
+            color: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            position: relative;
+            overflow-x: hidden;
         }
 
         .natal-tab-container.active {
@@ -537,40 +751,435 @@
         }
 
         .natal-tab-header {
-            background: linear-gradient(135deg, var(--christmas-red), var(--dark-green));
-            color: var(--white);
-            padding: 60px 0 40px;
             text-align: center;
+            margin: 20px 0 30px;
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            max-width: 1000px;
+            padding: 20px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .natal-title-container {
+            position: relative;
+            margin-bottom: 25px;
+        }
+
+        .natal-title {
+            font-family: 'Mountains of Christmas', cursive;
+            font-size: 3.5rem;
+            color: #ffcc00;
+            text-shadow: 
+                3px 3px 0 #c41e3a,
+                6px 6px 0 rgba(0, 0, 0, 0.2);
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+            position: relative;
+            display: inline-block;
+            padding: 0 40px;
+        }
+
+        .natal-title::before, .natal-title::after {
+            content: "🎅";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2.5rem;
+            animation: swing 3s ease-in-out infinite;
+        }
+
+        .natal-title::before {
+            left: -10px;
+        }
+
+        .natal-title::after {
+            right: -10px;
+            animation-delay: 1.5s;
+        }
+
+        .natal-subtitle {
+            font-size: 1.6rem;
+            color: #fff;
+            background: linear-gradient(90deg, #c41e3a, #ff6b6b);
+            display: inline-block;
+            padding: 10px 30px;
+            border-radius: 50px;
+            margin-bottom: 20px;
+            box-shadow: 0 6px 15px rgba(196, 30, 58, 0.4);
             position: relative;
             overflow: hidden;
         }
 
-        .natal-tab-header:before {
-            content: '';
+        .natal-subtitle::after {
+            content: "✨";
+            position: absolute;
+            right: 15px;
+            animation: sparkle 2s infinite;
+        }
+
+        /* Descrição do catálogo */
+        .natal-catalog-description {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 25px;
+            border-radius: 20px;
+            margin: 25px 0;
+            border: 2px solid #ffcc00;
+            font-size: 1.3rem;
+            line-height: 1.7;
+            text-align: center;
+            max-width: 800px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .natal-catalog-description::before {
+            content: "";
             position: absolute;
             top: 0;
             left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #c41e3a, #ffcc00, #c41e3a);
+        }
+
+        .natal-highlight {
+            color: #ffcc00;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Contador para encomendas */
+        .natal-countdown-container {
+            background: rgba(196, 30, 58, 0.2);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 25px 0;
+            max-width: 600px;
+            text-align: center;
+            border: 2px dashed #ffcc00;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .natal-countdown-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: #ffcc00;
+        }
+
+        .natal-countdown {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .natal-countdown-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 15px;
+            border-radius: 10px;
+            min-width: 80px;
+        }
+
+        .natal-countdown-number {
+            font-size: 2.2rem;
+            font-weight: bold;
+            color: #ffcc00;
+            text-shadow: 2px 2px 0 #c41e3a;
+        }
+
+        .natal-countdown-label {
+            font-size: 0.9rem;
+            margin-top: 5px;
+            color: #ddd;
+        }
+
+        /* Botões principais Natal */
+        .natal-buttons-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
+            width: 100%;
+            max-width: 600px;
+            margin: 30px 0;
+            z-index: 10;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .natal-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            width: 100%;
+            padding: 20px 30px;
+            border: none;
+            border-radius: 60px;
+            font-size: 1.4rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 0 rgba(0, 0, 0, 0.3);
+        }
+
+        .natal-btn::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
             width: 100%;
             height: 100%;
-            background: url('data:image/svg+xml,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M50,10 L60,40 L90,40 L65,60 L75,90 L50,70 L25,90 L35,60 L10,40 L40,40 Z" fill="%23FFFFFF" opacity="0.1"/></svg>');
-            opacity: 0.1;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.7s;
         }
 
-        .natal-tab-title {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-            color: var(--white);
-            position: relative;
-            z-index: 2;
+        .natal-btn:hover::before {
+            left: 100%;
         }
 
-        .natal-tagline {
-            font-size: 1.3rem;
+        .natal-btn-order {
+            background: linear-gradient(to right, #c41e3a, #ff6b6b, #c41e3a);
+            background-size: 200% 100%;
+            color: white;
+            font-size: 1.6rem;
+            animation: gradientShift 3s infinite;
+        }
+
+        .natal-btn-order:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 20px rgba(196, 30, 58, 0.5);
+        }
+
+        .natal-btn-site {
+            background: linear-gradient(to right, #0c5b44, #1a7d5e, #0c5b44);
+            background-size: 200% 100%;
+            color: white;
+            animation: gradientShift 3s infinite 0.5s;
+        }
+
+        .natal-btn-site:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 20px rgba(12, 91, 68, 0.5);
+        }
+
+        .natal-btn-icon {
+            font-size: 1.8rem;
+        }
+
+        /* Elementos decorativos natalinos */
+        .natal-gingerbread-man {
+            position: absolute;
+            width: 100px;
+            height: 150px;
+            background-color: #8B4513;
+            border-radius: 45% 45% 40% 40%;
+            z-index: 5;
             opacity: 0.9;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .natal-gingerbread-man::before, .natal-gingerbread-man::after {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 70px;
+            background-color: #8B4513;
+            border-radius: 50%;
+            top: 15px;
+        }
+
+        .natal-gingerbread-man::before {
+            left: -18px;
+            transform: rotate(20deg);
+        }
+
+        .natal-gingerbread-man::after {
+            right: -18px;
+            transform: rotate(-20deg);
+        }
+
+        .natal-gingerbread-face {
+            position: absolute;
+            top: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 30px;
+        }
+
+        .natal-gingerbread-eye {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: white;
+            border-radius: 50%;
+            top: 5px;
+        }
+
+        .natal-gingerbread-eye.left {
+            left: 10px;
+        }
+
+        .natal-gingerbread-eye.right {
+            right: 10px;
+        }
+
+        .natal-gingerbread-mouth {
+            position: absolute;
+            width: 25px;
+            height: 12px;
+            border-bottom: 3px solid white;
+            border-radius: 0 0 50% 50%;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .natal-gingerbread-button {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background-color: #ffcc00;
+            border-radius: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .natal-gingerbread-button:nth-child(1) {
+            top: 80px;
+        }
+
+        .natal-gingerbread-button:nth-child(2) {
+            top: 100px;
+        }
+
+        .natal-gingerbread-button:nth-child(3) {
+            top: 120px;
+        }
+
+        /* Canção natalina */
+        .natal-song-container {
+            background: rgba(255, 204, 0, 0.1);
+            border-radius: 20px;
+            padding: 25px;
+            margin: 30px 0;
             max-width: 700px;
-            margin: 0 auto 30px;
+            border: 2px solid #ffcc00;
             position: relative;
-            z-index: 2;
+            overflow: hidden;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .natal-song-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .natal-song-icon {
+            font-size: 2rem;
+            color: #ffcc00;
+            animation: musicNote 2s infinite;
+        }
+
+        .natal-song-title {
+            font-size: 1.8rem;
+            color: #ffcc00;
+            font-family: 'Mountains of Christmas', cursive;
+        }
+
+        .natal-song-lyrics {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            text-align: center;
+            font-style: italic;
+            color: #fff;
+        }
+
+        .natal-song-refrain {
+            color: #ffcc00;
+            font-weight: bold;
+            margin: 15px 0;
+            font-size: 1.3rem;
+        }
+
+        /* Rodapé Natal */
+        .natal-footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #aaa;
+            z-index: 10;
+            padding: 20px;
+            width: 100%;
+            max-width: 800px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Animações Natal */
+        @keyframes swing {
+            0%, 100% { transform: translateY(-50%) rotate(0deg); }
+            25% { transform: translateY(-50%) rotate(15deg); }
+            75% { transform: translateY(-50%) rotate(-15deg); }
+        }
+
+        @keyframes sparkle {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes musicNote {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+
+        @keyframes snowfall {
+            0% { transform: translateY(-100px) rotate(0deg); }
+            100% { transform: translateY(100vh) rotate(360deg); }
+        }
+
+        .natal-float-animation {
+            animation: float 4s ease-in-out infinite;
+        }
+
+        /* Elementos de neve */
+        .natal-snowflake {
+            position: absolute;
+            color: white;
+            font-size: 1.5em;
+            user-select: none;
+            pointer-events: none;
+            z-index: 1;
         }
 
         .close-natal-tab {
@@ -579,7 +1188,7 @@
             right: 20px;
             background: rgba(255, 255, 255, 0.1);
             border: none;
-            color: var(--white);
+            color: white;
             width: 50px;
             height: 50px;
             border-radius: 50%;
@@ -597,307 +1206,67 @@
             transform: rotate(90deg);
         }
 
-        .natal-promo-banner {
-            background: linear-gradient(135deg, var(--christmas-red), var(--christmas-green));
-            color: var(--white);
-            padding: 40px;
-            border-radius: var(--border-radius);
-            text-align: center;
-            margin: 40px auto;
-            max-width: 1000px;
-            box-shadow: var(--shadow);
-            position: relative;
-            overflow: hidden;
+        /* Responsividade Natal */
+        @media (max-width: 768px) {
+            .natal-title {
+                font-size: 2.5rem;
+                padding: 0 30px;
+            }
+            
+            .natal-subtitle {
+                font-size: 1.3rem;
+                padding: 8px 20px;
+            }
+            
+            .natal-catalog-description {
+                font-size: 1.1rem;
+                padding: 20px;
+            }
+            
+            .natal-btn {
+                font-size: 1.2rem;
+                padding: 18px 25px;
+            }
+            
+            .natal-btn-order {
+                font-size: 1.4rem;
+            }
+            
+            .natal-countdown {
+                gap: 10px;
+            }
+            
+            .natal-countdown-item {
+                min-width: 70px;
+                padding: 12px;
+            }
+            
+            .natal-countdown-number {
+                font-size: 1.8rem;
+            }
+            
+            .natal-gingerbread-man {
+                transform: scale(0.7);
+            }
         }
 
-        .natal-promo-banner:before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
-            background-size: 30px 30px;
-            opacity: 0.2;
+        @media (max-width: 480px) {
+            .natal-title {
+                font-size: 2rem;
+            }
+            
+            .natal-countdown {
+                flex-wrap: wrap;
+            }
+            
+            .natal-song-lyrics {
+                font-size: 1rem;
+            }
         }
 
-        .natal-promo-title {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            font-family: 'Playfair Display', serif;
-            position: relative;
-            z-index: 2;
-        }
-
-        .natal-promo-highlight {
-            background: var(--christmas-gold);
-            color: var(--dark);
-            padding: 10px 25px;
-            border-radius: 30px;
-            font-weight: 700;
-            display: inline-block;
-            margin: 15px 0;
-            font-size: 1.2rem;
-            position: relative;
-            z-index: 2;
-        }
-
-        /* Cards de Natal */
-        .natal-cards-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .natal-section-title {
-            text-align: center;
-            margin: 60px 0 40px;
-            position: relative;
-        }
-
-        .natal-section-title h2 {
-            font-size: 2.8rem;
-            color: var(--dark);
-            margin-bottom: 15px;
-            display: inline-block;
-        }
-
-        .natal-section-title h2:after {
-            content: '';
-            position: absolute;
-            width: 80px;
-            height: 4px;
-            background: linear-gradient(90deg, var(--christmas-red), var(--christmas-green));
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            border-radius: 2px;
-        }
-
-        .natal-products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 30px;
-            margin-bottom: 60px;
-        }
-
-        .natal-product-card {
-            background: var(--white);
-            border-radius: var(--border-radius);
-            padding: 30px;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            position: relative;
-            overflow: hidden;
-            border: 2px solid transparent;
-        }
-
-        .natal-product-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-            border-color: var(--christmas-gold);
-        }
-
-        .natal-product-card:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background: linear-gradient(90deg, var(--christmas-red), var(--christmas-green));
-        }
-
-        .natal-card-badge {
-            background: var(--christmas-gold);
-            color: var(--dark);
-            padding: 8px 20px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            display: inline-block;
-            margin-bottom: 20px;
-        }
-
-        .natal-card-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 20px;
-        }
-
-        .natal-card-title {
-            font-size: 1.6rem;
-            color: var(--dark);
-            font-weight: 700;
-            flex: 1;
-        }
-
-        .natal-card-price {
-            font-size: 2rem;
-            color: var(--christmas-red);
-            font-weight: 700;
-            margin-left: 20px;
-        }
-
-        .natal-card-description {
-            color: var(--text-light);
-            margin-bottom: 25px;
-            line-height: 1.6;
-        }
-
-        .natal-card-items {
-            margin-bottom: 25px;
-        }
-
-        .natal-item-list {
-            list-style: none;
-        }
-
-        .natal-item-list li {
-            padding: 8px 0;
-            border-bottom: 1px dashed #eee;
-            position: relative;
-            padding-left: 25px;
-        }
-
-        .natal-item-list li:before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: var(--christmas-green);
-            font-weight: bold;
-        }
-
-        .natal-price-options {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 20px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-        }
-
-        .natal-price-option {
-            text-align: center;
-            flex: 1;
-        }
-
-        .natal-price-label {
-            font-size: 0.9rem;
-            color: var(--text-light);
-            margin-bottom: 5px;
-        }
-
-        .natal-price-value {
-            font-size: 1.3rem;
-            color: var(--christmas-red);
-            font-weight: 600;
-        }
-
-        /* Tabela de Preços Natal */
-        .natal-price-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 30px 0;
-            background: var(--white);
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            box-shadow: var(--shadow);
-        }
-
-        .natal-price-table thead {
-            background: linear-gradient(135deg, var(--christmas-red), var(--dark-red));
-            color: var(--white);
-        }
-
-        .natal-price-table th {
-            padding: 20px;
-            text-align: left;
-            font-weight: 600;
-        }
-
-        .natal-price-table td {
-            padding: 20px;
-            border-bottom: 1px solid #eee;
-        }
-
-        .natal-price-table tbody tr:hover {
-            background: #f9f9f9;
-        }
-
-        /* Passos do Pedido Natal */
-        .natal-order-steps {
-            display: flex;
-            justify-content: space-between;
-            margin: 60px 0;
-            position: relative;
-            flex-wrap: wrap;
-            gap: 30px;
-        }
-
-        .natal-order-step {
-            text-align: center;
-            flex: 1;
-            min-width: 250px;
-            padding: 30px;
-            background: var(--white);
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow);
-            position: relative;
-            transition: var(--transition);
-        }
-
-        .natal-order-step:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-        }
-
-        .natal-step-number {
-            width: 60px;
-            height: 60px;
-            background: var(--christmas-red);
-            color: var(--white);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin: 0 auto 20px;
-            transition: var(--transition);
-        }
-
-        .natal-order-step:hover .natal-step-number {
-            background: var(--christmas-green);
-            transform: rotate(360deg);
-        }
-
-        /* Formas de Pagamento Natal */
-        .natal-payment-methods {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-            margin: 40px 0;
-        }
-
-        .natal-payment-method {
-            background: var(--white);
-            padding: 20px 30px;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            min-width: 200px;
-        }
-
-        .natal-payment-method:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-        }
+        /* =========================================== */
+        /* FIM DOS ESTILOS DA PÁGINA DE NATAL */
+        /* =========================================== */
 
         /* Diferenciais */
         .diferenciais {
@@ -1887,7 +2256,7 @@
                 font-size: 2.5rem;
             }
             
-            .natal-tab-title {
+            .natal-title {
                 font-size: 2.8rem;
             }
         }
@@ -1905,10 +2274,6 @@
             .processo-steps {
                 flex-direction: column;
                 gap: 50px;
-            }
-            
-            .natal-products-grid {
-                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             }
             
             .nav-menu {
@@ -1937,10 +2302,6 @@
             
             .cart-sidebar {
                 width: 100%;
-            }
-            
-            .natal-order-steps {
-                flex-direction: column;
             }
         }
 
@@ -1979,22 +2340,8 @@
                 font-size: 1rem;
             }
             
-            .natal-tab-title {
+            .natal-title {
                 font-size: 2.2rem;
-            }
-            
-            .natal-promo-title {
-                font-size: 1.8rem;
-            }
-            
-            .natal-card-header {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 10px;
-            }
-            
-            .natal-card-price {
-                margin-left: 0;
             }
         }
 
@@ -2028,15 +2375,6 @@
             
             .cart-item-quantity {
                 align-self: flex-end;
-            }
-            
-            .natal-products-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .natal-price-options {
-                flex-direction: column;
-                gap: 15px;
             }
         }
     </style>
@@ -2715,490 +3053,249 @@
             <i class="fas fa-times"></i>
         </button>
         
-        <!-- Header da Guia Natal -->
+        <!-- Elementos de neve -->
+        <div id="snowflakes-container"></div>
+        
+        <!-- Bonecos de gengibre -->
+        <div class="natal-gingerbread-man natal-float-animation" style="top: 10%; left: 5%;">
+            <div class="natal-gingerbread-face">
+                <div class="natal-gingerbread-eye left"></div>
+                <div class="natal-gingerbread-eye right"></div>
+                <div class="natal-gingerbread-mouth"></div>
+            </div>
+            <div class="natal-gingerbread-button"></div>
+            <div class="natal-gingerbread-button"></div>
+            <div class="natal-gingerbread-button"></div>
+        </div>
+        
+        <div class="natal-gingerbread-man natal-float-animation" style="top: 15%; right: 8%; animation-delay: 1s;">
+            <div class="natal-gingerbread-face">
+                <div class="natal-gingerbread-eye left"></div>
+                <div class="natal-gingerbread-eye right"></div>
+                <div class="natal-gingerbread-mouth"></div>
+            </div>
+            <div class="natal-gingerbread-button"></div>
+            <div class="natal-gingerbread-button"></div>
+            <div class="natal-gingerbread-button"></div>
+        </div>
+        
+        <div class="natal-gingerbread-man natal-float-animation" style="bottom: 15%; left: 8%; animation-delay: 2s;">
+            <div class="natal-gingerbread-face">
+                <div class="natal-gingerbread-eye left"></div>
+                <div class="natal-gingerbread-eye right"></div>
+                <div class="natal-gingerbread-mouth"></div>
+            </div>
+            <div class="natal-gingerbread-button"></div>
+            <div class="natal-gingerbread-button"></div>
+            <div class="natal-gingerbread-button"></div>
+        </div>
+        
+        <!-- Conteúdo principal da página de Natal -->
         <div class="natal-tab-header">
-            <div class="container">
-                <h1 class="natal-tab-title">Lar das Delícias - Natal 2025</h1>
-                <p class="natal-tagline">Catálogo especial de Natal. Produtos artesanais feitos sob encomenda.</p>
-                
-                <div class="hero-buttons" style="margin-top: 40px;">
-                    <a href="https://wa.me/5511977921704" target="_blank" class="btn btn-whatsapp">
-                        <i class="fab fa-whatsapp"></i> Fazer Pedido Agora
-                    </a>
-                    <button class="btn btn-light" id="backToMainSite">
-                        <i class="fas fa-arrow-left"></i> Voltar para Site Principal
-                    </button>
+            <div class="natal-title-container">
+                <h1 class="natal-title">Lar das Delícias</h1>
+            </div>
+            
+            <div class="natal-subtitle">Natal 2025</div>
+            
+            <div class="natal-catalog-description">
+                <p><span class="natal-highlight">Catálogo especial de Natal.</span> Produtos artesanais feitos sob encomenda com os melhores ingredientes selecionados. Delícias exclusivas para tornar sua ceia de Natal inesquecível. Confeccionados com amor e tradição familiar.</p>
+            </div>
+            
+            <!-- Contador regressivo -->
+            <div class="natal-countdown-container">
+                <div class="natal-countdown-title">
+                    ⏰ Último dia para encomendas: 20 de Dezembro de 2025
+                </div>
+                <div class="natal-countdown" id="natal-countdown">
+                    <div class="natal-countdown-item">
+                        <div class="natal-countdown-number" id="natal-days">00</div>
+                        <div class="natal-countdown-label">DIAS</div>
+                    </div>
+                    <div class="natal-countdown-item">
+                        <div class="natal-countdown-number" id="natal-hours">00</div>
+                        <div class="natal-countdown-label">HORAS</div>
+                    </div>
+                    <div class="natal-countdown-item">
+                        <div class="natal-countdown-number" id="natal-minutes">00</div>
+                        <div class="natal-countdown-label">MINUTOS</div>
+                    </div>
+                    <div class="natal-countdown-item">
+                        <div class="natal-countdown-number" id="natal-seconds">00</div>
+                        <div class="natal-countdown-label">SEGUNDOS</div>
+                    </div>
                 </div>
             </div>
         </div>
-
-        <!-- Banner Promocional -->
-        <div class="container">
-            <div class="natal-promo-banner">
-                <h2 class="natal-promo-title">5% de Desconto no PIX!</h2>
-                <p style="font-size: 1.2rem; opacity: 0.9; margin-bottom: 20px;">
-                    Para pedidos confirmados até 18 de Dezembro
-                </p>
-                <div class="natal-promo-highlight">Encomendas limitadas - Reserve já!</div>
-                <a href="https://wa.me/5511977921704" target="_blank" class="btn" style="background: white; color: var(--christmas-red); margin-top: 20px;">
-                    <i class="fab fa-whatsapp"></i> Garantir Desconto
-                </a>
+        
+        <!-- Botões de ação -->
+        <div class="natal-buttons-container">
+            <a href="https://wa.me/5511977921704?text=Olá! Gostaria de fazer um pedido de Natal do Lar das Delícias." target="_blank" class="natal-btn natal-btn-order" id="natalOrderBtn">
+                <i class="fas fa-gift natal-btn-icon"></i>
+                Fazer Pedido Agora
+            </a>
+            
+            <a href="#" class="natal-btn natal-btn-site" id="natalSiteBtn">
+                <i class="fas fa-home natal-btn-icon"></i>
+                Voltar para Site Principal
+            </a>
+        </div>
+        
+        <!-- Canção natalina -->
+        <div class="natal-song-container">
+            <div class="natal-song-header">
+                <i class="fas fa-music natal-song-icon"></i>
+                <h2 class="natal-song-title">Canção do Lar das Delícias</h2>
+                <i class="fas fa-music natal-song-icon" style="animation-delay: 0.5s;"></i>
+            </div>
+            
+            <div class="natal-song-lyrics">
+                <p>🎶 No aconchego do Natal, com amor a preparar,</p>
+                <p>O Lar das Delícias vem pra todos presentear!</p>
+                
+                <div class="natal-song-refrain">🎵 Panetones macios, bolos ricos a brilhar,</div>
+                
+                <p>Doces tradicionais, sabores a encantar,</p>
+                <p>Para sua mesa farta, com a família a celebrar!</p>
+                
+                <div class="natal-song-refrain">🎵 É hora de encomendar, não deixe para depois,</div>
+                
+                <p>Garanta suas delícias, não perca essa vez!</p>
+                <p>Do Lar das Delícias, o sabor que você quer!</p>
+                
+                <div class="natal-song-refrain">🎅 Feliz Natal a todos, com muito amor e prazer! 🎅</div>
             </div>
         </div>
-
-        <!-- Como Fazer Pedido -->
-        <div class="container">
-            <div class="natal-section-title">
-                <h2>Como Fazer Seu Pedido</h2>
-                <p style="color: var(--text-light); font-size: 1.2rem; margin-top: 20px;">
-                    Siga estes 3 passos simples para garantir sua ceia de Natal
-                </p>
-            </div>
-            
-            <div class="natal-order-steps">
-                <div class="natal-order-step">
-                    <div class="natal-step-number">1</div>
-                    <div style="font-size: 2.5rem; color: var(--christmas-gold); margin-bottom: 20px;">
-                        <i class="fab fa-whatsapp"></i>
-                    </div>
-                    <h3 style="font-size: 1.4rem; margin-bottom: 10px; color: var(--dark);">Faça seu pedido</h3>
-                    <p style="color: var(--text-light);">Entre em contato via WhatsApp</p>
-                </div>
-                
-                <div class="natal-order-step">
-                    <div class="natal-step-number">2</div>
-                    <div style="font-size: 2.5rem; color: var(--christmas-gold); margin-bottom: 20px;">
-                        <i class="fas fa-hand-holding-usd"></i>
-                    </div>
-                    <h3 style="font-size: 1.4rem; margin-bottom: 10px; color: var(--dark);">Confirme o sinal</h3>
-                    <p style="color: var(--text-light);">20% do valor total para confirmação</p>
-                </div>
-                
-                <div class="natal-order-step">
-                    <div class="natal-step-number">3</div>
-                    <div style="font-size: 2.5rem; color: var(--christmas-gold); margin-bottom: 20px;">
-                        <i class="fas fa-truck"></i>
-                    </div>
-                    <h3 style="font-size: 1.4rem; margin-bottom: 10px; color: var(--dark);">Agende a entrega</h3>
-                    <p style="color: var(--text-light);">Combine retirada ou entrega (taxa a combinar)</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Kits de Ceia -->
-        <div class="natal-cards-container">
-            <div class="natal-section-title">
-                <h2>Kits de Ceia Completos</h2>
-                <p style="color: var(--text-light); font-size: 1.2rem; margin-top: 20px;">
-                    Pratinhos prontos para sua celebração natalina
-                </p>
-            </div>
-            
-            <div class="natal-products-grid">
-                <!-- Kit Intermediário -->
-                <div class="natal-product-card">
-                    <div class="natal-card-badge">SERVE 6 PESSOAS</div>
-                    <div class="natal-card-header">
-                        <h3 class="natal-card-title">Kit Ceia Intermediário</h3>
-                        <div class="natal-card-price">R$ 600,00</div>
-                    </div>
-                    <p class="natal-card-description">Perfeito para famílias médias. Todos os pratos prontos para servir.</p>
-                    
-                    <div class="natal-card-items">
-                        <h4 style="margin-bottom: 15px; color: var(--dark); font-size: 1.1rem;">Inclui:</h4>
-                        <ul class="natal-item-list">
-                            <li>Pernil suculento</li>
-                            <li>Lasanha à bolonhesa</li>
-                            <li>Arroz à grega</li>
-                            <li>Maionese cremosa</li>
-                            <li>Farofa crocante</li>
-                            <li>Gelatina colorida</li>
-                            <li>Kibe assado</li>
-                        </ul>
-                    </div>
-                    
-                    <a href="https://wa.me/5511977921704?text=Olá! Gostaria de encomendar o Kit Ceia Intermediário para 6 pessoas." target="_blank" class="btn" style="background: var(--christmas-red); color: white; width: 100%; margin-top: 20px;">
-                        <i class="fab fa-whatsapp"></i> Encomendar Kit
-                    </a>
-                </div>
-                
-                <!-- Kit Avançado -->
-                <div class="natal-product-card">
-                    <div class="natal-card-badge" style="background: var(--christmas-red); color: white;">SERVE 8 PESSOAS</div>
-                    <div class="natal-card-header">
-                        <h3 class="natal-card-title">Kit Ceia Avançado</h3>
-                        <div class="natal-card-price">R$ 780,00</div>
-                    </div>
-                    <p class="natal-card-description">Ideal para reuniões maiores. Menu completo e sofisticado.</p>
-                    
-                    <div class="natal-card-items">
-                        <h4 style="margin-bottom: 15px; color: var(--dark); font-size: 1.1rem;">Inclui:</h4>
-                        <ul class="natal-item-list">
-                            <li>Pernil especial</li>
-                            <li>Salpicão tradicional</li>
-                            <li>Farofa premium</li>
-                            <li>Kibe recheado</li>
-                            <li>Lasanha especial</li>
-                            <li>Arroz à grega</li>
-                            <li>Salada de macarrão</li>
-                            <li>Bolo natalino</li>
-                        </ul>
-                    </div>
-                    
-                    <a href="https://wa.me/5511977921704?text=Olá! Gostaria de encomendar o Kit Ceia Avançado para 8 pessoas." target="_blank" class="btn" style="background: var(--christmas-red); color: white; width: 100%; margin-top: 20px;">
-                        <i class="fab fa-whatsapp"></i> Encomendar Kit
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Pratos Salgados Avulsos -->
-        <div class="natal-cards-container">
-            <div class="natal-section-title">
-                <h2>Pratos Salgados Avulsos</h2>
-                <p style="color: var(--text-light); font-size: 1.2rem; margin-top: 20px;">
-                    Escolha seus favoritos ou monte seu próprio kit
-                </p>
-            </div>
-            
-            <div class="natal-products-grid">
-                <div class="natal-product-card">
-                    <div class="natal-card-header">
-                        <h3 class="natal-card-title">Costela com Molho Barbecue</h3>
-                    </div>
-                    <p class="natal-card-description">Costela suculenta com molho barbecue caseiro</p>
-                    <div class="natal-card-price" style="font-size: 1.8rem; text-align: center; margin: 20px 0;">R$ 160,00/kg</div>
-                    <a href="https://wa.me/5511977921704?text=Olá! Gostaria de encomendar Costela com Molho Barbecue." target="_blank" class="btn" style="background: var(--christmas-green); color: white; width: 100%;">
-                        <i class="fab fa-whatsapp"></i> Encomendar
-                    </a>
-                </div>
-                
-                <div class="natal-product-card">
-                    <div class="natal-card-header">
-                        <h3 class="natal-card-title">Salpicão</h3>
-                    </div>
-                    <p class="natal-card-description">Salpicão tradicional com frango desfiado</p>
-                    <div class="natal-card-price" style="font-size: 1.8rem; text-align: center; margin: 20px 0;">R$ 100,00/kg</div>
-                    <a href="https://wa.me/5511977921704?text=Olá! Gostaria de encomendar Salpicão." target="_blank" class="btn" style="background: var(--christmas-green); color: white; width: 100%;">
-                        <i class="fab fa-whatsapp"></i> Encomendar
-                    </a>
-                </div>
-                
-                <div class="natal-product-card">
-                    <div class="natal-card-header">
-                        <h3 class="natal-card-title">Lagarto Recheado</h3>
-                    </div>
-                    <p class="natal-card-description">Lagarto recheado com ingredientes especiais</p>
-                    <div class="natal-card-price" style="font-size: 1.8rem; text-align: center; margin: 20px 0;">R$ 190,00/kg</div>
-                    <a href="https://wa.me/5511977921704?text=Olá! Gostaria de encomendar Lagarto Recheado." target="_blank" class="btn" style="background: var(--christmas-green); color: white; width: 100%;">
-                        <i class="fab fa-whatsapp"></i> Encomendar
-                    </a>
-                </div>
-                
-                <div class="natal-product-card">
-                    <div class="natal-card-header">
-                        <h3 class="natal-card-title">Lasanha</h3>
-                    </div>
-                    <p class="natal-card-description">Lasanha à bolonhesa com queijo derretido</p>
-                    <div class="natal-card-price" style="font-size: 1.8rem; text-align: center; margin: 20px 0;">R$ 100,00/kg</div>
-                    <a href="https://wa.me/5511977921704?text=Olá! Gostaria de encomendar Lasanha." target="_blank" class="btn" style="background: var(--christmas-green); color: white; width: 100%;">
-                        <i class="fab fa-whatsapp"></i> Encomendar
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Acompanhamentos e Saladas -->
-        <div class="natal-cards-container">
-            <div class="natal-section-title">
-                <h2>Acompanhamentos e Saladas</h2>
-                <p style="color: var(--text-light); font-size: 1.2rem; margin-top: 20px;">
-                    Para completar sua ceia com perfeição
-                </p>
-            </div>
-            
-            <table class="natal-price-table">
-                <thead>
-                    <tr>
-                        <th>Produto</th>
-                        <th>Descrição</th>
-                        <th>Preço</th>
-                        <th>Ação</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Farofa Crocante</strong></td>
-                        <td>Farofa crocante com bacon e temperos especiais</td>
-                        <td style="font-size: 1.5rem; color: var(--christmas-red); font-weight: 700;">R$ 60,00/kg</td>
-                        <td>
-                            <a href="https://wa.me/5511977921704?text=Olá! Gostaria de encomendar Farofa Crocante." target="_blank" class="btn" style="background: var(--christmas-red); color: white; padding: 8px 15px; font-size: 0.9rem;">
-                                <i class="fab fa-whatsapp"></i> Pedir
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><strong>Arroz à Grega</strong></td>
-                        <td>Arroz com legumes e frutas secas</td>
-                        <td style="font-size: 1.5rem; color: var(--christmas-red); font-weight: 700;">R$ 70,00/kg</td>
-                        <td>
-                            <a href="https://wa.me/5511977921704?text=Olá! Gostaria de encomendar Arroz à Grega." target="_blank" class="btn" style="background: var(--christmas-red); color: white; padding: 8px 15px; font-size: 0.9rem;">
-                                <i class="fab fa-whatsapp"></i> Pedir
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><strong>Salada de Maionese</strong></td>
-                        <td>Maionese cremosa com batata e legumes</td>
-                        <td style="font-size: 1.5rem; color: var(--christmas-red); font-weight: 700;">R$ 80,00/kg</td>
-                        <td>
-                            <a href="https://wa.me/5511977921704?text=Olá! Gostaria de encomendar Salada de Maionese." target="_blank" class="btn" style="background: var(--christmas-red); color: white; padding: 8px 15px; font-size: 0.9rem;">
-                                <i class="fab fa-whatsapp"></i> Pedir
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><strong>Vinagrete Fresco</strong></td>
-                        <td>Vinagrete com tomate, cebola e pimentão</td>
-                        <td style="font-size: 1.5rem; color: var(--christmas-red); font-weight: 700;">R$ 50,00/kg</td>
-                        <td>
-                            <a href="https://wa.me/5511977921704?text=Olá! Gostaria de encomendar Vinagrete Fresco." target="_blank" class="btn" style="background: var(--christmas-red); color: white; padding: 8px 15px; font-size: 0.9rem;">
-                                <i class="fab fa-whatsapp"></i> Pedir
-                            </a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <!-- Sobremesas -->
-        <div class="natal-cards-container">
-            <div class="natal-section-title">
-                <h2>Sobremesas de Natal</h2>
-                <p style="color: var(--text-light); font-size: 1.2rem; margin-top: 20px;">
-                    Finalize sua ceia com doces especiais
-                </p>
-            </div>
-            
-            <div class="natal-products-grid">
-                <!-- Pavê de Chocolate -->
-                <div class="natal-product-card">
-                    <div class="natal-card-header">
-                        <h3 class="natal-card-title">Pavê de Chocolate</h3>
-                    </div>
-                    <p class="natal-card-description">Camadas de biscoito e creme de chocolate</p>
-                    
-                    <div class="natal-price-options">
-                        <div class="natal-price-option">
-                            <div class="natal-price-label">Pequeno</div>
-                            <div class="natal-price-value">R$ 65,00</div>
-                        </div>
-                        <div class="natal-price-option">
-                            <div class="natal-price-label">Médio</div>
-                            <div class="natal-price-value">R$ 90,00</div>
-                        </div>
-                        <div class="natal-price-option">
-                            <div class="natal-price-label">Grande</div>
-                            <div class="natal-price-value">R$ 108,00</div>
-                        </div>
-                    </div>
-                    
-                    <a href="https://wa.me/5511977921704?text=Olá! Gostaria de encomendar Pavê de Chocolate." target="_blank" class="btn" style="background: var(--christmas-red); color: white; width: 100%; margin-top: 20px;">
-                        <i class="fab fa-whatsapp"></i> Encomendar
-                    </a>
-                </div>
-                
-                <!-- Torta Holandesa -->
-                <div class="natal-product-card">
-                    <div class="natal-card-header">
-                        <h3 class="natal-card-title">Torta Holandesa</h3>
-                    </div>
-                    <p class="natal-card-description">Base de biscoito com creme e chocolate</p>
-                    
-                    <div class="natal-price-options">
-                        <div class="natal-price-option">
-                            <div class="natal-price-label">Pequeno</div>
-                            <div class="natal-price-value">R$ 100,00</div>
-                        </div>
-                        <div class="natal-price-option">
-                            <div class="natal-price-label">Médio</div>
-                            <div class="natal-price-value">R$ 120,00</div>
-                        </div>
-                        <div class="natal-price-option">
-                            <div class="natal-price-label">Grande</div>
-                            <div class="natal-price-value">R$ 140,00</div>
-                        </div>
-                    </div>
-                    
-                    <a href="https://wa.me/5511977921704?text=Olá! Gostaria de encomendar Torta Holandesa." target="_blank" class="btn" style="background: var(--christmas-red); color: white; width: 100%; margin-top: 20px;">
-                        <i class="fab fa-whatsapp"></i> Encomendar
-                    </a>
-                </div>
-                
-                <!-- Pudim -->
-                <div class="natal-product-card">
-                    <div class="natal-card-header">
-                        <h3 class="natal-card-title">Pudim</h3>
-                    </div>
-                    <p class="natal-card-description">Pudim de leite condensado com calda</p>
-                    
-                    <div class="natal-price-options">
-                        <div class="natal-price-option">
-                            <div class="natal-price-label">Pequeno</div>
-                            <div class="natal-price-value">R$ 42,00</div>
-                        </div>
-                        <div class="natal-price-option">
-                            <div class="natal-price-label">Médio</div>
-                            <div class="natal-price-value">R$ 54,00</div>
-                        </div>
-                        <div class="natal-price-option">
-                            <div class="natal-price-label">Grande</div>
-                            <div class="natal-price-value">R$ 66,00</div>
-                        </div>
-                    </div>
-                    
-                    <a href="https://wa.me/5511977921704?text=Olá! Gostaria de encomendar Pudim." target="_blank" class="btn" style="background: var(--christmas-red); color: white; width: 100%; margin-top: 20px;">
-                        <i class="fab fa-whatsapp"></i> Encomendar
-                    </a>
-                </div>
-                
-                <!-- Gelatina de Natal -->
-                <div class="natal-product-card">
-                    <div class="natal-card-header">
-                        <h3 class="natal-card-title">Gelatina de Natal</h3>
-                    </div>
-                    <p class="natal-card-description">Gelatina colorida especial para ceia</p>
-                    
-                    <div class="natal-price-options">
-                        <div class="natal-price-option">
-                            <div class="natal-price-label">Pequeno</div>
-                            <div class="natal-price-value">R$ 28,00</div>
-                        </div>
-                        <div class="natal-price-option">
-                            <div class="natal-price-label">Médio</div>
-                            <div class="natal-price-value">R$ 36,00</div>
-                        </div>
-                        <div class="natal-price-option">
-                            <div class="natal-price-label">Grande</div>
-                            <div class="natal-price-value">R$ 48,00</div>
-                        </div>
-                    </div>
-                    
-                    <a href="https://wa.me/5511977921704?text=Olá! Gostaria de encomendar Gelatina de Natal." target="_blank" class="btn" style="background: var(--christmas-red); color: white; width: 100%; margin-top: 20px;">
-                        <i class="fab fa-whatsapp"></i> Encomendar
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Especialidades da Casa -->
-        <div class="natal-cards-container">
-            <div class="natal-section-title">
-                <h2>Especialidades da Casa</h2>
-                <p style="color: var(--text-light); font-size: 1.2rem; margin-top: 20px;">
-                    Produtos exclusivos para seu Natal especial
-                </p>
-            </div>
-            
-            <div class="natal-products-grid">
-                <div class="natal-product-card">
-                    <div class="natal-card-header">
-                        <h3 class="natal-card-title">Panetone Trufado 500g</h3>
-                    </div>
-                    <p class="natal-card-description">Panetone artesanal com gotas de chocolate</p>
-                    <div class="natal-card-price" style="font-size: 1.8rem; text-align: center; margin: 20px 0;">R$ 70,00 - R$ 90,00</div>
-                    <a href="https://wa.me/5511977921704?text=Olá! Gostaria de encomendar Panetone Trufado." target="_blank" class="btn" style="background: var(--christmas-red); color: white; width: 100%;">
-                        <i class="fab fa-whatsapp"></i> Encomendar
-                    </a>
-                </div>
-                
-                <div class="natal-product-card">
-                    <div class="natal-card-header">
-                        <h3 class="natal-card-title">Bolo Natalino</h3>
-                    </div>
-                    <p class="natal-card-description">Bolo especial decorado para o Natal</p>
-                    <div class="natal-card-price" style="font-size: 1.8rem; text-align: center; margin: 20px 0;">R$ 96,00</div>
-                    <a href="https://wa.me/5511977921704?text=Olá! Gostaria de encomendar Bolo Natalino." target="_blank" class="btn" style="background: var(--christmas-red); color: white; width: 100%;">
-                        <i class="fab fa-whatsapp"></i> Encomendar
-                    </a>
-                </div>
-                
-                <div class="natal-product-card">
-                    <div class="natal-card-header">
-                        <h3 class="natal-card-title">Torta Mousse Trufado</h3>
-                    </div>
-                    <p class="natal-card-description">Torta com mousse e trufas de chocolate</p>
-                    <div class="natal-card-price" style="font-size: 1.8rem; text-align: center; margin: 20px 0;">R$ 99,99 - R$ 130,00</div>
-                    <a href="https://wa.me/5511977921704?text=Olá! Gostaria de encomendar Torta Mousse Trufado." target="_blank" class="btn" style="background: var(--christmas-red); color: white; width: 100%;">
-                        <i class="fab fa-whatsapp"></i> Encomendar
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Formas de Pagamento -->
-        <div class="container">
-            <div class="natal-section-title">
-                <h2>Formas de Pagamento</h2>
-                <p style="color: var(--text-light); font-size: 1.2rem; margin-top: 20px;">
-                    Aceitamos diversas opções para sua conveniência
-                </p>
-            </div>
-            
-            <div class="natal-payment-methods">
-                <div class="natal-payment-method">
-                    <div style="font-size: 2rem; color: var(--christmas-green);">
-                        <i class="fas fa-qrcode"></i>
-                    </div>
-                    <div>
-                        <h4 style="font-size: 1.1rem; margin-bottom: 5px;">PIX</h4>
-                        <p style="font-size: 0.9rem; color: var(--text-light);">5% de desconto</p>
-                    </div>
-                </div>
-                
-                <div class="natal-payment-method">
-                    <div style="font-size: 2rem; color: var(--success);">
-                        <i class="fas fa-money-bill-wave"></i>
-                    </div>
-                    <div>
-                        <h4 style="font-size: 1.1rem; margin-bottom: 5px;">Dinheiro</h4>
-                        <p style="font-size: 0.9rem; color: var(--text-light);">Aceitamos</p>
-                    </div>
-                </div>
-                
-                <div class="natal-payment-method">
-                    <div style="font-size: 2rem; color: var(--primary);">
-                        <i class="fas fa-exchange-alt"></i>
-                    </div>
-                    <div>
-                        <h4 style="font-size: 1.1rem; margin-bottom: 5px;">Transferência</h4>
-                        <p style="font-size: 0.9rem; color: var(--text-light);">Bancária</p>
-                    </div>
-                </div>
-                
-                <div class="natal-payment-method">
-                    <div style="font-size: 2rem; color: var(--secondary);">
-                        <i class="fas fa-credit-card"></i>
-                    </div>
-                    <div>
-                        <h4 style="font-size: 1.1rem; margin-bottom: 5px;">Cartão</h4>
-                        <p style="font-size: 0.9rem; color: var(--text-light);">Até 5x sem juros</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div style="text-align: center; margin: 60px 0;">
-                <p style="font-size: 1.1rem; color: var(--text-light); margin-bottom: 20px;">
-                    <strong>Desconto Especial:</strong> 5% em PIX para pedidos confirmados até 18/12
-                </p>
-                <a href="https://wa.me/5511977921704" target="_blank" class="btn btn-whatsapp" style="padding: 18px 50px; font-size: 1.2rem;">
-                    <i class="fab fa-whatsapp"></i> Fazer Pedido de Natal Agora
-                </a>
-            </div>
+        
+        <!-- Rodapé Natal -->
+        <div class="natal-footer">
+            <p>🎄 Lar das Delícias © 2025 - Todos os direitos reservados 🎄</p>
+            <p style="margin-top: 10px; font-size: 0.9rem;">🍪 Produtos 100% artesanais • 📞 (11) 97792-1704 • 📧 contato@lardasdelicias.com</p>
+            <p style="margin-top: 5px; font-size: 0.8rem; color: #ffcc00;">✨ Entregamos em toda a região metropolitana até 24/12 ✨</p>
         </div>
     </div>
 
     <script>
+        // Schema Markup dinâmico adicional
+        document.addEventListener('DOMContentLoaded', function() {
+            // Breadcrumbs Schema
+            const breadcrumbSchema = {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Início",
+                        "item": "https://lardasdelicias.com.br/#home"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Sobre Nós",
+                        "item": "https://lardasdelicias.com.br/#sobre"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Produtos",
+                        "item": "https://lardasdelicias.com.br/#produtos"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 4,
+                        "name": "Contato",
+                        "item": "https://lardasdelicias.com.br/#contato"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 5,
+                        "name": "Natal 2025",
+                        "item": "https://lardasdelicias.com.br/#natal"
+                    }
+                ]
+            };
+            
+            // FAQ Schema
+            const faqSchema = {
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "Vocês trabalham com produtos Zero Lactose?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Sim, temos uma linha completa de produtos Zero Lactose (APLV Friendly) desenvolvida especialmente para quem tem restrições alimentares. Trabalhamos com duas linhas de produção separadas para garantir segurança."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Qual o prazo para encomendas?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Recomendamos encomendar com pelo menos 7 dias de antecedência. Para eventos maiores, sugerimos 15 dias. Para o Natal, as encomendas vão até 20 de dezembro de 2025."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Entregam em toda São Paulo?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Sim, entregamos em toda a região metropolitana de São Paulo. A taxa de entrega varia conforme a localização e será combinada no momento da encomenda."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Quais formas de pagamento aceitam?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Aceitamos PIX (com 5% de desconto), dinheiro, transferência bancária e cartão de crédito (até 5x sem juros). Para o Natal, temos promoção especial no PIX."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Os produtos Zero Lactose são preparados separadamente?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Sim, seguimos um protocolo rigoroso de segurança. A linha Zero Lactose é preparada em ambiente separado, com utensílios dedicados e ingredientes específicos para evitar contaminação cruzada."
+                        }
+                    }
+                ]
+            };
+            
+            // Inserir schemas dinâmicos
+            const script1 = document.createElement('script');
+            script1.type = 'application/ld+json';
+            script1.textContent = JSON.stringify(breadcrumbSchema);
+            document.head.appendChild(script1);
+            
+            const script2 = document.createElement('script');
+            script2.type = 'application/ld+json';
+            script2.textContent = JSON.stringify(faqSchema);
+            document.head.appendChild(script2);
+            
+            // Schema para página atual
+            const currentPage = window.location.hash || '#home';
+            const pageSchema = {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "name": document.title,
+                "description": document.querySelector('meta[name="description"]').content,
+                "url": "https://lardasdelicias.com.br" + currentPage,
+                "mainEntity": {
+                    "@type": "Bakery",
+                    "name": "Lar das Delícias",
+                    "description": "Confeitaria artesanal especializada em produtos Zero Lactose"
+                }
+            };
+            
+            const script3 = document.createElement('script');
+            script3.type = 'application/ld+json';
+            script3.textContent = JSON.stringify(pageSchema);
+            document.head.appendChild(script3);
+        });
+        
         // ============================================
         // GERENCIAMENTO DAS ABAS/GUIAS
         // ============================================
@@ -3207,7 +3304,7 @@
         const mainSiteContent = document.getElementById('mainSiteContent');
         const openNatalTabLinks = document.querySelectorAll('#openNatalTab, #openNatalTabBtn, #openNatalTabFooter');
         const closeNatalTabBtn = document.getElementById('closeNatalTab');
-        const backToMainSiteBtn = document.getElementById('backToMainSite');
+        const natalSiteBtn = document.getElementById('natalSiteBtn');
         
         // Abrir aba do Natal
         openNatalTabLinks.forEach(link => {
@@ -3219,7 +3316,10 @@
         
         // Fechar aba do Natal
         closeNatalTabBtn.addEventListener('click', closeNatalTab);
-        backToMainSiteBtn.addEventListener('click', closeNatalTab);
+        natalSiteBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            closeNatalTab();
+        });
         
         function openNatalTab() {
             mainSiteContent.style.display = 'none';
@@ -3231,6 +3331,9 @@
                 link.classList.remove('active');
             });
             document.querySelector('#openNatalTab').classList.add('active');
+            
+            // Inicializar elementos do Natal
+            initNatalPage();
             
             // Rolar para o topo
             window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -3248,6 +3351,152 @@
             
             // Rolar para o topo
             window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // ============================================
+        // FUNÇÕES ESPECÍFICAS DA PÁGINA DE NATAL
+        // ============================================
+        
+        function initNatalPage() {
+            // Criar efeito de neve
+            createNatalSnowflakes();
+            
+            // Inicializar contador regressivo
+            updateNatalCountdown();
+            
+            // Configurar interações dos botões
+            setupNatalButtonInteractions();
+            
+            // Iniciar contador regressivo
+            setInterval(updateNatalCountdown, 1000);
+            
+            // Efeito de digitação no título (opcional)
+            const title = document.querySelector('.natal-title');
+            if (title) {
+                const originalText = title.textContent;
+                title.textContent = '';
+                
+                let i = 0;
+                function typeWriter() {
+                    if (i < originalText.length) {
+                        title.textContent += originalText.charAt(i);
+                        i++;
+                        setTimeout(typeWriter, 100);
+                    }
+                }
+                
+                setTimeout(typeWriter, 500);
+            }
+        }
+        
+        // Criar efeito de neve
+        function createNatalSnowflakes() {
+            const container = document.getElementById('snowflakes-container');
+            if (!container) return;
+            
+            container.innerHTML = '';
+            const snowflakeCount = 40;
+            
+            for (let i = 0; i < snowflakeCount; i++) {
+                const snowflake = document.createElement('div');
+                snowflake.classList.add('natal-snowflake');
+                snowflake.innerHTML = '❄';
+                
+                // Posição e tamanho aleatórios
+                const left = Math.random() * 100;
+                const size = Math.random() * 1.5 + 0.8;
+                const duration = Math.random() * 15 + 10;
+                const delay = Math.random() * 5;
+                const opacity = Math.random() * 0.7 + 0.3;
+                
+                snowflake.style.left = `${left}%`;
+                snowflake.style.fontSize = `${size}em`;
+                snowflake.style.animation = `snowfall ${duration}s linear ${delay}s infinite`;
+                snowflake.style.opacity = opacity;
+                
+                container.appendChild(snowflake);
+            }
+        }
+        
+        // Contador regressivo para 20 de dezembro de 2025
+        function updateNatalCountdown() {
+            const targetDate = new Date('Dec 20, 2025 23:59:59').getTime();
+            const now = new Date().getTime();
+            const difference = targetDate - now;
+            
+            if (difference > 0) {
+                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+                
+                const daysEl = document.getElementById('natal-days');
+                const hoursEl = document.getElementById('natal-hours');
+                const minutesEl = document.getElementById('natal-minutes');
+                const secondsEl = document.getElementById('natal-seconds');
+                
+                if (daysEl) daysEl.textContent = days.toString().padStart(2, '0');
+                if (hoursEl) hoursEl.textContent = hours.toString().padStart(2, '0');
+                if (minutesEl) minutesEl.textContent = minutes.toString().padStart(2, '0');
+                if (secondsEl) secondsEl.textContent = seconds.toString().padStart(2, '0');
+            } else {
+                const countdownEl = document.getElementById('natal-countdown');
+                if (countdownEl) {
+                    countdownEl.innerHTML = '<div style="color:#ffcc00; font-size:1.5rem;">🎅 Período de encomendas encerrado! 🎅</div>';
+                }
+            }
+        }
+        
+        // Efeitos de interação nos botões
+        function setupNatalButtonInteractions() {
+            const orderBtn = document.getElementById('natalOrderBtn');
+            
+            if (orderBtn) {
+                orderBtn.addEventListener('click', function(e) {
+                    // Efeito visual
+                    this.style.transform = 'scale(0.95)';
+                    
+                    // Criar efeito de confetes
+                    createNatalConfetti();
+                    
+                    setTimeout(() => {
+                        this.style.transform = '';
+                    }, 200);
+                });
+            }
+        }
+        
+        // Efeito de confetes (simplificado)
+        function createNatalConfetti() {
+            const colors = ['#c41e3a', '#ffcc00', '#1a7d5e', '#ffffff'];
+            const container = document.getElementById('snowflakes-container');
+            if (!container) return;
+            
+            for (let i = 0; i < 20; i++) {
+                const confetti = document.createElement('div');
+                confetti.innerHTML = ['🎄', '🎁', '⭐', '🍪', '🎅', '❄'][Math.floor(Math.random() * 6)];
+                confetti.style.position = 'absolute';
+                confetti.style.fontSize = `${Math.random() * 1.5 + 1}em`;
+                confetti.style.color = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.left = `${Math.random() * 100}%`;
+                confetti.style.top = '0';
+                confetti.style.zIndex = '100';
+                confetti.style.pointerEvents = 'none';
+                confetti.style.userSelect = 'none';
+                
+                // Animação de confete
+                const animation = confetti.animate([
+                    { transform: 'translateY(0) rotate(0deg)', opacity: 1 },
+                    { transform: `translateY(${window.innerHeight}px) rotate(${Math.random() * 360}deg)`, opacity: 0 }
+                ], {
+                    duration: Math.random() * 2000 + 1000,
+                    easing: 'cubic-bezier(0.215, 0.610, 0.355, 1)'
+                });
+                
+                animation.onfinish = () => confetti.remove();
+                
+                container.appendChild(confetti);
+            }
         }
 
         // ============================================
