@@ -244,6 +244,7 @@
         .social-top {
             display: flex;
             gap: 15px;
+            margin-top: 20px;
         }
 
         .social-top a {
@@ -330,7 +331,7 @@
             position: absolute;
             width: 0;
             height: 3px;
-            background: var(--secondary);
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
             bottom: 0;
             left: 0;
             transition: var(--transition);
@@ -1267,8 +1268,8 @@
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
-                <span class="badge" style="background: var(--success);">Linha Inclusiva Disponível</span>
-                <h1>Confeitaria Artesanal com <span class="hero-highlight">Linhas de Produção Inclusiva</span></h1>
+                <span class="badge" style="background: var(--success);">Linha 0% Lactose Disponível</span>
+                <h1>Confeitaria Artesanal com <span class="hero-highlight">Linhas de Produção Inclusivas</span></h1>
                 <p>Doces, bolos e salgados artesanais. Atendemos a linha tradicional e a linha Zero Lactose, desenvolvidas com receitas dedicadas para sabor e segurança.</p>
                 
                 <div class="hero-buttons">
@@ -1397,7 +1398,7 @@
                 <button class="filter-btn" data-filter="salgados">Salgados</button>
                 <button class="filter-btn" data-filter="especiais">Especiais</button>
                 <button class="filter-btn" data-filter="tradicional">Linha Tradicional</button>
-                <button class="filter-btn" data-filter="zerolactose">Linha Inclusiva</button>
+                <button class="filter-btn" data-filter="zerolactose">Linha 0% Lactose</button>
             </div>
             
             <div class="produtos-grid">
@@ -1453,7 +1454,7 @@
                 
                 <div class="produto-card" data-category="bolos tradicional">
                     <div class="produto-img">
-                        <img src="https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Bolo de Casamento">
+                        <img src="https://images.unsplash.com/photo-1588195538326-c5b1e9f80aa1b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Bolo de Casamento">
                     </div>
                     <div class="produto-info">
                         <h3>Bolo Nupcial Elegante</h3>
@@ -1469,7 +1470,7 @@
                 
                 <div class="produto-card" data-category="doces tradicional zerolactose">
                     <div class="produto-img">
-                        <img src="https://images.unsplash.com/photo-1571115764595-644a1f56a55c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Doces Finos">
+                        <img src="https://images.unsplash.com/photo-1571115764595-6441f56a55c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Doces Finos">
                     </div>
                     <div class="produto-info">
                         <h3>Doces Finos Premium</h3>
@@ -1493,6 +1494,23 @@
                         <div class="produto-price">
                             <div class="price">A partir de R$ 120<small>/unidade</small></div>
                             <button class="produto-btn" data-product="Tortas Artísticas">
+                                <i class="fas fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="produto-card" data-category="bolos especiais zerolactose">
+                    <div class="produto-img">
+                        <img src="https://i.imgur.com/wUH1pif.png" alt="Close-up de bolo de milho em formato de anel com textura granulada e cor amarela intensa, com duas espigas de milho cru ao fundo.">
+                        <div class="produto-tag" style="background: var(--success);">100% ZERO LACTOSE</div>
+                    </div>
+                    <div class="produto-info">
+                        <h3>Bolo de Milho Inclusivo</h3>
+                        <p class="produto-desc">Bolo de milho em formato de anel, com textura granulada e sabor intenso. Receita 100% Zero Lactose, perfeito para restrições.</p>
+                        <div class="produto-price">
+                            <div class="price">R$ 45,00<small>/unidade</small></div>
+                            <button class="produto-btn" data-product="Bolo de Milho Inclusivo">
                                 <i class="fas fa-shopping-cart"></i>
                             </button>
                         </div>
@@ -1997,6 +2015,3 @@
     </script>
 </body>
 </html>
-```
-
-
