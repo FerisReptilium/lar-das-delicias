@@ -1,0 +1,19 @@
+{
+  "redirects": [
+    {
+      "source": "/contato",
+      "destination": "/#contato",
+      "permanent": true
+    },
+    {
+      "source": "/sobre",
+      "destination": "/#sobre",
+      "permanent": true
+    },
+    {
+      "source": "/produtos",
+      "destination": "/#produtos",
+      "permanent": true
+    }
+  ]
+}
