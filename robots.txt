@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lar-das-delicias.vercel.app/sitemap.xml
