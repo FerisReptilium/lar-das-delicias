@@ -1091,6 +1091,106 @@
             background: #128C7E;
             transform: scale(1.1);
         }
+        
+        /* NOVOS ESTILOS PARA O CARRINHO DE COMPRAS */
+        .cart-sidebar {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 350px;
+            height: 100%;
+            background: var(--white);
+            box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+            z-index: 2000;
+            transform: translateX(100%);
+            transition: transform 0.4s ease-in-out;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cart-sidebar.open {
+            transform: translateX(0);
+        }
+
+        .cart-sidebar h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+            border-bottom: 2px solid var(--gray);
+            padding-bottom: 10px;
+        }
+
+        .cart-items-list {
+            flex-grow: 1;
+            overflow-y: auto;
+            margin-bottom: 20px;
+        }
+
+        .cart-item {
+            display: flex;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid var(--gray);
+        }
+
+        .cart-item-info {
+            flex-grow: 1;
+            padding-right: 10px;
+        }
+
+        .cart-item-info h4 {
+            font-size: 1.1rem;
+            margin: 0;
+            line-height: 1.3;
+        }
+
+        .cart-item-info p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin: 5px 0 0;
+        }
+
+        .cart-item-quantity {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-shrink: 0; /* Impede que o botão de quantidade quebre a linha */
+        }
+
+        .cart-item-quantity button {
+            background: none;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+            width: 30px;
+            height: 30px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .cart-item-quantity button:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .cart-totals {
+            padding-top: 20px;
+            border-top: 2px solid var(--primary-light);
+        }
+
+        .cart-totals p {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .empty-cart-message {
+            text-align: center;
+            color: var(--text-light);
+            padding: 50px 0;
+            font-style: italic;
+        }
 
         /* Responsividade */
         @media (max-width: 1200px) {
@@ -1103,111 +1203,28 @@
             }
         }
 
-        @media (max-width: 992px) {
-            .section {
-                padding: 80px 0;
-            }
-            
-            .sobre-content, .contato-grid {
-                grid-template-columns: 1fr;
-                gap: 50px;
-            }
-            
-            .processo-steps {
-                flex-direction: column;
-                gap: 50px;
-            }
-            
-            .processo-steps:before {
-                display: none;
-            }
-            
-            .nav-menu {
-                display: none;
-            }
-            
-            .mobile-menu-btn {
-                display: block;
-            }
-            
-            .header-top .container {
-                flex-direction: column;
-                gap: 15px;
-                text-align: center;
-            }
-            
-            .contact-info {
-                flex-direction: column;
-                gap: 15px;
-            }
-            
-            .personal-story, .mission-statement {
-                padding: 20px;
-                margin: 20px 0;
-            }
-        }
-
         @media (max-width: 768px) {
-            .hero {
-                padding: 150px 0 100px;
-                background-attachment: scroll;
-            }
-            
-            .hero h1 {
-                font-size: 2.8rem;
-            }
-            
-            .hero-buttons {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            
-            .produtos-grid, .galeria-grid {
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            }
-            
-            .diferenciais-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .main-header {
-                top: 0;
-            }
-            
-            .header-top {
-                display: none;
-            }
-            
-            .personal-story p, .mission-statement p {
-                font-size: 1rem;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-            
-            .section-title h2 {
-                font-size: 2rem;
-            }
-            
-            .btn {
-                padding: 14px 30px;
-                font-size: 1rem;
-            }
-            
-            .footer-content {
-                grid-template-columns: 1fr;
-            }
-            
-            .personal-story, .mission-statement {
-                padding: 15px;
+             .cart-sidebar {
+                width: 100%;
             }
         }
     </style>
 </head>
 <body>
+    <div id="shoppingCartSidebar" class="cart-sidebar">
+        <h2>Seu Pedido</h2>
+        <div id="cartItemsList" class="cart-items-list">
+            <p class="empty-cart-message">Seu carrinho está vazio.</p>
+        </div>
+        <div class="cart-totals">
+            <p>Subtotal: <span id="cartSubtotal">R$ 0,00</span></p>
+            <a href="#" id="checkoutWhatsappBtn" class="btn btn-whatsapp" style="width: 100%; margin-top: 15px;">
+                <i class="fab fa-whatsapp"></i> Finalizar Pedido
+            </a>
+            <button id="closeCartBtn" class="btn btn-light" style="width: 100%; margin-top: 10px;">Continuar Comprando</button>
+        </div>
+    </div>
+
     <a href="https://wa.me/5511977921704" target="_blank" class="whatsapp-float">
         <i class="fab fa-whatsapp"></i>
     </a>
@@ -1257,7 +1274,7 @@
                 </ul>
                 
                 <div class="header-actions">
-                    <button class="cart-btn">
+                    <button class="cart-btn" id="openCartBtn">
                         <i class="fas fa-shopping-cart"></i>
                         <span class="cart-count">0</span>
                     </button>
@@ -1304,7 +1321,7 @@
                         <i class="fas fa-award"></i>
                     </div>
                     <h3>Ingredientes Premium</h3>
-                    <p>Utilizamos apenas os melhores ingredientes selecionados para garantir sabor e qualidade excepcionais em ambas as linhas.</p>
+                    <p>Utilizamos apenas os melhores ingredientes selecionados para garantir sabor e qualidade excepcional em ambas as linhas.</p>
                 </div>
                 
                 <div class="diferencial-card">
@@ -1406,7 +1423,7 @@
             </div>
             
             <div class="produtos-grid">
-                <div class="produto-card" data-category="bolos tradicional zerolactose">
+                <div class="produto-card" data-category="bolos tradicional zerolactose" data-price="180.00" data-unit="/kg">
                     <div class="produto-img">
                         <img src="https://i.imgur.com/o0inOe0.jpeg" alt="Mini bolo Red Velvet Premium Bolo artesanal com cobertura de chocolate, creme e morangos, disponível nas versões Tradicional (com leite) e Zero Lactose. (Consulte valor diferenciado).">
                         <div class="produto-tag">MAIS VENDIDO</div>
@@ -1423,7 +1440,7 @@
                     </div>
                 </div>
                 
-                <div class="produto-card" data-category="doces tradicional zerolactose">
+                <div class="produto-card" data-category="doces tradicional zerolactose" data-price="4.50" data-unit="/unidade">
                     <div class="produto-img">
                         <img src="https://imgur.com/jd1tBCz.jpeg" alt="Bolo Red Velvet com calda e morangos">
                         <div class="produto-tag" style="background: var(--success);">OPÇÃO 0% LACTOSE</div>
@@ -1440,7 +1457,7 @@
                     </div>
                 </div>
                 
-                <div class="produto-card" data-category="salgados tradicional zerolactose">
+                <div class="produto-card" data-category="salgados tradicional zerolactose" data-price="120.00" data-unit="/cento">
                     <div class="produto-img">
                         <img src="https://imgur.com/RIHnY1N.jpeg" alt="Salgados Finos">
                     </div>
@@ -1456,7 +1473,7 @@
                     </div>
                 </div>
                 
-                <div class="produto-card" data-category="bolos tradicional">
+                <div class="produto-card" data-category="bolos tradicional" data-price="90.00" data-unit="/unidade">
                     <div class="produto-img">
                         <img src="https://i.imgur.com/sEa5JzW.jpeg" alt="Mini bolo azul com cobertura drip de chocolate, granulado colorido na base, e decorado com brigadeiros e morangos fatiados no topo.">
                     </div>
@@ -1472,7 +1489,7 @@
                     </div>
                 </div>
                 
-                <div class="produto-card" data-category="doces tradicional zerolactose">
+                <div class="produto-card" data-category="doces tradicional zerolactose" data-price="85.00" data-unit="/cento">
                     <div class="produto-img">
                         <img src="https://i.imgur.com/hiczNC9.jpeg" alt="Mini Bolo Red Velvet Premium. Fatia de bolo Red Velvet em close-up, mostrando camadas de massa vermelha e cream cheese frosting branco, com farelos de bolo decorando o topo. Embalado em recipiente transparente.">
                     </div>
@@ -1488,23 +1505,23 @@
                     </div>
                 </div>
                 
-                <div class="produto-card" data-category="especiais tradicional zerolactose">
+                <div class="produto-card" data-category="especiais tradicional zerolactose" data-price="120.00" data-unit="/unidade">
                     <div class="produto-img">
-                        <img src="https://imgur.com/5DjmUUf.jpeg" alt="Tortas Decoradas">
+                        <img src="https://images.unsplash.com/photo-1519861531473-920034658307?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Tortas Decoradas">
                     </div>
                     <div class="produto-info">
-                        <h3>Tortas Salgadas</h3>
-                        <p class="produto-desc">Torta salgada em formato de rosca recheada com milho e vegetais, decorada com sardinha, ovo cozido e tomate. Ideal para buffet.</p>
+                        <h3>Tortas Artísticas</h3>
+                        <p class="produto-desc">Tortas doces com designs criativos, disponíveis nas duas linhas de produção.</p>
                         <div class="produto-price">
                             <div class="price">A partir de R$ 120<small>/unidade</small></div>
-                            <button class="produto-btn" data-product="TORTA SALGADAS">
+                            <button class="produto-btn" data-product="Tortas Artísticas">
                                 <i class="fas fa-shopping-cart"></i>
                             </button>
                         </div>
                     </div>
                 </div>
 
-                <div class="produto-card" data-category="bolos especiais zerolactose">
+                <div class="produto-card" data-category="bolos especiais zerolactose" data-price="45.00" data-unit="/unidade">
                     <div class="produto-img">
                         <img src="https://i.imgur.com/wUH1pif.png" alt="Close-up de bolo de milho em formato de anel com textura granulada e cor amarela intensa, com duas espigas de milho cru ao fundo.">
                         <div class="produto-tag" style="background: var(--success);">100% ZERO LACTOSE</div>
@@ -1812,7 +1829,182 @@
     </footer>
 
     <script>
-        // Header scroll effect
+        // Variáveis globais e inicialização do LocalStorage
+        let cart = JSON.parse(localStorage.getItem('larDasDeliciasCart')) || [];
+        const cartCountElement = document.querySelector('.cart-count');
+        const cartSidebar = document.getElementById('shoppingCartSidebar');
+        const cartItemsList = document.getElementById('cartItemsList');
+        const cartSubtotalElement = document.getElementById('cartSubtotal');
+        const checkoutWhatsappBtn = document.getElementById('checkoutWhatsappBtn');
+
+        // Inicializa o contador do carrinho
+        updateCartCount();
+
+        // --- FUNÇÕES DE LÓGICA DO CARRINHO ---
+
+        function saveCart() {
+            localStorage.setItem('larDasDeliciasCart', JSON.stringify(cart));
+            updateCartCount();
+            renderCart();
+        }
+
+        function updateCartCount() {
+            // Conta a quantidade total de itens no carrinho (soma das quantidades)
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            cartCountElement.textContent = totalItems;
+        }
+
+        function formatCurrency(value) {
+            // Formata o valor para Real Brasileiro
+            return value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+        }
+        
+        function addItemToCart(name, priceString, unit) {
+            // 1. Converte o preço (removendo "A partir de R$ " ou outros caracteres)
+            const priceClean = priceString.replace(/[^0-9,.]/g, '').replace(',', '.');
+            const price = parseFloat(priceClean);
+            
+            // 2. Procura o item no carrinho
+            const existingItem = cart.find(item => item.name === name);
+
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({
+                    name: name,
+                    price: price,
+                    unit: unit,
+                    quantity: 1
+                });
+            }
+            
+            saveCart();
+        }
+
+        window.changeItemQuantity = function(name, change) {
+            const itemIndex = cart.findIndex(item => item.name === name);
+            if (itemIndex > -1) {
+                cart[itemIndex].quantity += change;
+                if (cart[itemIndex].quantity <= 0) {
+                    // Remove o item se a quantidade for 0 ou menos
+                    cart.splice(itemIndex, 1);
+                }
+                saveCart();
+            }
+        }
+
+        // --- FUNÇÃO DE RENDERIZAÇÃO E CÁLCULO VISUAL ---
+        
+        function renderCart() {
+            cartItemsList.innerHTML = ''; // Limpa a lista atual
+
+            if (cart.length === 0) {
+                cartItemsList.innerHTML = '<p class="empty-cart-message">Seu carrinho está vazio. Adicione um produto!</p>';
+                cartSubtotalElement.textContent = formatCurrency(0);
+                checkoutWhatsappBtn.style.display = 'none';
+                return;
+            }
+
+            let subtotal = 0;
+            checkoutWhatsappBtn.style.display = 'block'; // Mostra o botão se houver itens
+
+            cart.forEach(item => {
+                const itemTotal = item.price * item.quantity;
+                subtotal += itemTotal;
+
+                const itemElement = document.createElement('div');
+                itemElement.classList.add('cart-item');
+                // Escape para aspas simples em nomes de produtos
+                const escapedName = item.name.replace(/'/g, "\\'"); 
+                
+                itemElement.innerHTML = `
+                    <div class="cart-item-info">
+                        <h4>${item.name}</h4>
+                        <p>${item.quantity} x ${formatCurrency(item.price)}${item.unit}</p>
+                        <p>Total: <strong>${formatCurrency(itemTotal)}</strong></p>
+                    </div>
+                    <div class="cart-item-quantity">
+                        <button onclick="changeItemQuantity('${escapedName}', -1)">-</button>
+                        <span>${item.quantity}</span>
+                        <button onclick="changeItemQuantity('${escapedName}', 1)">+</button>
+                    </div>
+                `;
+                cartItemsList.appendChild(itemElement);
+            });
+
+            cartSubtotalElement.textContent = formatCurrency(subtotal);
+            
+            // Atualiza o link do WhatsApp com o resumo
+            updateCheckoutLink(subtotal);
+        }
+
+        function updateCheckoutLink(subtotal) {
+            let message = "Olá, Lar das Delícias! Gostaria de fazer o seguinte pedido:\n\n";
+            
+            cart.forEach(item => {
+                // Adiciona cada item à mensagem
+                message += `• ${item.quantity}x ${item.name} (${formatCurrency(item.price)}${item.unit}) - Total: ${formatCurrency(item.quantity * item.price)}\n`;
+            });
+
+            message += `\n*Subtotal do Pedido: ${formatCurrency(subtotal)}*`;
+            message += `\n\nAguardamos seu contato para confirmar os detalhes (Linha, Entrega/Retirada e Pagamento).`;
+            
+            checkoutWhatsappBtn.href = `https://wa.me/5511977921704?text=${encodeURIComponent(message)}`;
+        }
+
+
+        // --- EVENT LISTENERS E UI ---
+        
+        // 1. Configura os atributos data-price e data-unit e os botões de adicionar ao carrinho
+        document.querySelectorAll('.produto-card').forEach(card => {
+            const name = card.querySelector('h3').textContent.trim();
+            let priceText = card.querySelector('.price').textContent.trim();
+            const unit = card.querySelector('small').textContent.trim();
+            
+            // Lógica para extrair o preço base de strings como "A partir de R$ 180/kg"
+            const priceMatch = priceText.match(/(\d[\d,.]*)/);
+            let price = priceMatch ? parseFloat(priceMatch[0].replace(',', '.')) : 0;
+
+            // Adiciona atributos de dados para o JS usar
+            card.setAttribute('data-price', price.toFixed(2));
+            card.setAttribute('data-unit', unit);
+
+            card.querySelector('.produto-btn').addEventListener('click', function() {
+                // O botão usa os atributos de dados do cartão pai
+                let cardPrice = card.getAttribute('data-price');
+                let cardUnit = card.getAttribute('data-unit');
+                
+                if (parseFloat(cardPrice) <= 0) {
+                    alert(`Produto "${name}" precisa de um orçamento. Fale com a Jô pelo WhatsApp.`);
+                    window.open(`https://wa.me/5511977921704?text=${encodeURIComponent('Olá! Gostaria de um orçamento para o produto: ' + name)}`, '_blank');
+                    return;
+                }
+                
+                // Adiciona o item ao carrinho
+                addItemToCart(name, cardPrice, cardUnit);
+                
+                // Abre o carrinho após adicionar
+                cartSidebar.classList.add('open');
+            });
+        });
+        
+        // 2. Lógica para abrir e fechar a sidebar do carrinho
+        document.getElementById('openCartBtn').addEventListener('click', () => {
+            cartSidebar.classList.add('open');
+            renderCart(); // Garante que o carrinho seja renderizado ao abrir
+        });
+
+        document.getElementById('closeCartBtn').addEventListener('click', () => {
+            cartSidebar.classList.remove('open');
+        });
+
+        // 3. Inicializa ao carregar a página
+        document.addEventListener('DOMContentLoaded', () => {
+            updateCartCount();
+        });
+
+
+        // Header scroll effect (Funções antigas mantidas)
         window.addEventListener('scroll', function() {
             const header = document.getElementById('mainHeader');
             if (window.scrollY > 50) {
@@ -1897,47 +2089,6 @@
                         }, 300);
                     }
                 });
-            });
-        });
-
-        // Product cart functionality
-        const cartBtns = document.querySelectorAll('.produto-btn');
-        const cartCount = document.querySelector('.cart-count');
-        let cartItems = 0;
-
-        cartBtns.forEach(btn => {
-            btn.addEventListener('click', function() {
-                const productName = this.getAttribute('data-product');
-                cartItems++;
-                cartCount.textContent = cartItems;
-                
-                // Show notification
-                const notification = document.createElement('div');
-                notification.style.cssText = `
-                    position: fixed;
-                    top: 100px;
-                    right: 20px;
-                    background: var(--success);
-                    color: white;
-                    padding: 15px 25px;
-                    border-radius: 10px;
-                    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-                    z-index: 10000;
-                    animation: slideIn 0.3s ease;
-                `;
-                notification.innerHTML = `<i class="fas fa-check-circle"></i> ${productName} adicionado ao carrinho!`;
-                document.body.appendChild(notification);
-                
-                setTimeout(() => {
-                    notification.style.animation = 'slideOut 0.3s ease';
-                    setTimeout(() => notification.remove(), 300);
-                }, 3000);
-                
-                // Redirect to WhatsApp after 3 seconds
-                setTimeout(() => {
-                    const message = `Olá! Gostaria de mais informações sobre: ${productName}. Por favor, me informe se desejo a Linha Tradicional ou a Linha Zero Lactose.`;
-                    window.open(`https://wa.me/5511977921704?text=${encodeURIComponent(message)}`, '_blank');
-                }, 3500);
             });
         });
 
